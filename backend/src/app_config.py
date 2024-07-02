@@ -3,7 +3,7 @@ from pathlib import Path
 from pydantic import BaseModel
 from pydantic_settings import BaseSettings
 
-KEYS_DIR = Path(__file__) / "auth" / "jwt_keys"
+KEYS_DIR = Path(__file__).parent / "auth" / "jwt_keys"
 
 
 class JWT_Settings(BaseSettings):

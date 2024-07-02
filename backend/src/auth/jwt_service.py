@@ -13,6 +13,7 @@ class JWT_Service:
         PRIVATE_KEY: str,
         PUBLIC_KEY: str,
         ALGORITHM: str,
+        COOKIE_ALIAS: str,
         token_expire_minutes: int,
     ) -> None:
         self.TOKEN_TYPE_FIELD = TOKEN_TYPE_FIELD
@@ -21,6 +22,7 @@ class JWT_Service:
         self.PUBLIC_KEY = PUBLIC_KEY.read_text()
         self.ALGORITHM = ALGORITHM
         self.token_expire_minutes = token_expire_minutes
+        self.COOKIE_ALIAS = COOKIE_ALIAS
 
     def jwt_encode(
         self,
@@ -35,7 +37,7 @@ class JWT_Service:
                 expire_time_delta (timedelta | None, optional): expiration time, for example timedelta(day=1),
                                                                 if not set, it will be the default time (1440 minutes)
         Returns:
-                        str: JWT token
+                str: JWT token
         """
         payload_copy = payload.copy()
 
@@ -70,18 +72,16 @@ class JWT_Service:
 
     async def create_jwt(
         self,
-        token_type: str,
         token_data: dict,
         expire_timedelta: timedelta | None = None,
     ):
         jwt_payload = {
-            self.TOKEN_TYPE_FIELD: token_type,
+            self.TOKEN_TYPE_FIELD: self.ACCESS_TOKEN_TYPE,
         }
         jwt_payload.update(token_data)
-        return self.encode_jwt(
+        return self.jwt_encode(
             payload=jwt_payload,
             expire_time_delta=expire_timedelta,
-            expire_minutes=self.token_expire_minutes,
         )
 
 
@@ -92,4 +92,5 @@ jwt_service = JWT_Service(
     PUBLIC_KEY=app_settings.jwt_settings.public_key_path,
     ALGORITHM=app_settings.jwt_settings.algorithm,
     token_expire_minutes=1440,
+    COOKIE_ALIAS="JWT-ACCESS-TOKEN",
 )
