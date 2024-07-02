@@ -1,0 +1,7 @@
+venv
+.pytest-cache
+__pycache__
+.db
+.vscode
+jwt-private.pem
+jwt-public.pem
