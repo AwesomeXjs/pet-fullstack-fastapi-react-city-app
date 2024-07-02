@@ -62,7 +62,7 @@ async def login_user(
         Depends(login_user_by_username_and_password),
     ],
 ) -> UserCreateSchema:
-    await create_jwt_and_set_cookie(
+    create_jwt_and_set_cookie(
         response=response,
         email=user.email,
         username=user.username,
@@ -85,7 +85,7 @@ async def logout_user(
 
 
 @router.get("/private_route")
-async def auth_by_jwt_payload(
+async def auth_for_private_route(
     validate_route: Annotated[bool, Depends(auth_by_jwt_payload)],
 ) -> bool:
     return validate_route

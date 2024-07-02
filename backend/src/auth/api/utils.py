@@ -5,12 +5,12 @@ from .exceptions import unauth_401_exc
 from auth.jwt_service import jwt_service
 
 
-async def create_jwt_and_set_cookie(
+def create_jwt_and_set_cookie(
     response: Response,
     username: str,
     email: str,
 ):
-    access_token = await jwt_service.create_jwt(
+    access_token = jwt_service.create_jwt(
         token_data={
             "username": username,
             "email": email,

@@ -1,8 +1,8 @@
-from typing import Annotated
+from typing import Annotated, Union
 
 from sqlalchemy import select
+from fastapi import Cookie, Depends, Form
 from sqlalchemy.ext.asyncio import AsyncSession
-from fastapi import Cookie, Depends, Form, Responseonse
 
 from db.models import User
 from auth.jwt_service import jwt_service
@@ -10,12 +10,13 @@ from auth.auth_service import auth_service
 from .session_dep import session_dependency
 from jwt.exceptions import InvalidTokenError
 from auth.api.schemas import UserCreateSchema
-from auth.api.exceptions import unauth_401_exc, not_accept_406_excfrom auth.api.exceptions import unauth_401_exc, not_accept_406_exc
+from auth.api.exceptions import unauth_401_exc, not_accept_406_exc
 
 
 # возвращает данные из JWT токена из кук
 async def get_payload_from_jwt_cookie(
-    token: str = Cookie(alias=jwt_service.COOKIE_ALIAS),
+    # token: str = Cookie(alias=jwt_service.COOKIE_ALIAS),
+    token: Annotated[Union[str, None], Cookie(alias=jwt_service.COOKIE_ALIAS)] = None,
 ) -> dict:
     try:
         payload = jwt_service.decode_jwt(token)
@@ -54,4 +55,3 @@ async def auth_by_jwt_payload(
     raise not_accept_406_exc(
         f"Мы не смогли верифицировать вас, пожалуйста, зайдите в систему заного!"
     )
-
