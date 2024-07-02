@@ -6,6 +6,7 @@ from db.models import User
 from .schemas import UserCreateSchema
 from auth.jwt_service import jwt_service
 from auth.auth_service import auth_service
+from .utils import create_jwt_and_set_cookie
 
 
 async def create_user(
@@ -22,10 +23,11 @@ async def create_user(
         email=email,
     )
     await session.execute(stmt)
-    access_token = await jwt_service.create_jwt(
-        token_data={"username": username},
+    create_jwt_and_set_cookie(
+        response=response,
+        email=email,
+        username=username,
     )
-    response.set_cookie(jwt_service.COOKIE_ALIAS, access_token)
     await session.commit()
     return UserCreateSchema(
         username=username,

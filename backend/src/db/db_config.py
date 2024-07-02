@@ -5,8 +5,6 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 SRC_DIR = Path(__file__).parent.parent.parent
 
-print(SRC_DIR)
-
 
 class Db_Settings(BaseSettings):
     DB_HOST: str

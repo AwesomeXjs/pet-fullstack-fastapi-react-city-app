@@ -1,11 +1,17 @@
 from fastapi import HTTPException, status
 
-unique_error = HTTPException(
-    status_code=status.HTTP_406_NOT_ACCEPTABLE,
-    detail=f"Такой логин или емаил уже существует!",
-)
 
-something_wrong = HTTPException(
-    status_code=status.HTTP_406_NOT_ACCEPTABLE,
-    detail=f"Что то пошло не так, проверьте подключение к интернету!",
-)
+def not_accept_406_exc(detail: str):
+    not_accept = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail=detail,
+    )
+    return not_accept
+
+
+def unauth_401_exc(detail: str):
+    unregistered_exc = HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail=detail,
+    )
+    return unregistered_exc

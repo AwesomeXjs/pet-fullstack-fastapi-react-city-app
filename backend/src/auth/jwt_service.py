@@ -1,5 +1,4 @@
 import jwt
-
 from datetime import timedelta, datetime
 
 from app_config import app_settings
