@@ -26,27 +26,15 @@ class JWT_Service:
     def jwt_encode(
         self,
         payload: dict,
+        expire_minutes: int,
         expire_time_delta: timedelta | None = None,
     ) -> str:
-        """creating a jwt token based on the necessary data (payload)
-        and with the ability to set your own expiration time
-
-        Args:
-                payload (dict): information that we want to transfer to the backend during authentication
-                expire_time_delta (timedelta | None, optional): expiration time, for example timedelta(day=1),
-                                                                if not set, it will be the default time (1440 minutes)
-        Returns:
-                str: JWT token
-        """
         payload_copy = payload.copy()
-
-        # устанавливаем срок экспирации токена
-        # now - текущее время
         now = datetime.utcnow()
         if expire_time_delta:
             expire = now + expire_time_delta
         else:
-            expire = now + timedelta(minutes=self.token_expire_minutes)
+            expire = now + timedelta(minutes=expire_minutes)
         payload_copy.update(
             exp=expire,
             iat=now,
@@ -69,9 +57,10 @@ class JWT_Service:
         )
         return decoded
 
-    async def create_jwt(
+    def create_jwt(
         self,
         token_data: dict,
+        expire_minutes: int,
         expire_timedelta: timedelta | None = None,
     ):
         jwt_payload = {
@@ -81,6 +70,7 @@ class JWT_Service:
         return self.jwt_encode(
             payload=jwt_payload,
             expire_time_delta=expire_timedelta,
+            expire_minutes=expire_minutes,
         )
 
 
@@ -90,6 +80,6 @@ jwt_service = JWT_Service(
     PRIVATE_KEY=app_settings.jwt_settings.private_key_path,
     PUBLIC_KEY=app_settings.jwt_settings.public_key_path,
     ALGORITHM=app_settings.jwt_settings.algorithm,
-    token_expire_minutes=1440,
-    COOKIE_ALIAS="JWT-ACCESS-TOKEN",
+    token_expire_minutes=app_settings.jwt_settings.access_token_expire_minutes,
+    COOKIE_ALIAS=app_settings.jwt_settings.cookie_alias,
 )

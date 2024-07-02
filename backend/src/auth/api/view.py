@@ -12,15 +12,15 @@ from fastapi import (
 )
 
 from . import crud
-from auth import jwt_service
 from .schemas import UserCreateSchema
 from .exceptions import not_accept_406_exc
 from dependencies.session_dep import session_dependency
 from dependencies.auth_dep import (
+    auth_by_jwt_payload,
     get_payload_from_jwt_cookie,
     login_user_by_username_and_password,
 )
-from .utils import create_jwt_and_set_cookie
+from .utils import create_jwt_and_set_cookie, delete_cookie
 
 router = APIRouter(prefix="/auth")
 
@@ -70,7 +70,7 @@ async def login_user(
     return user
 
 
-@router.delete("/")
+@router.delete("/logout")
 async def logout_user(
     response: Response,
     payload: Annotated[
@@ -78,22 +78,14 @@ async def logout_user(
         Depends(get_payload_from_jwt_cookie),
     ],
 ):
-    username = payload.get("username")
-    response.delete_cookie(jwt_service.COOKIE_ALIAS)
-    return {
-        "Status": "OK",
-        "data": f"До свидания, {username}!",
-    }
-
-
-@router.get("/authentication")
-async def auth_by_jwt_payload(
-    payload: Annotated[dict, Depends(get_payload_from_jwt_cookie)],
-) -> bool:
-    username = payload.get("username")
-    if username is not None:
-        return True
-
-    raise not_accept_406_exc(
-        f"Мы не смогли верифицировать вас, пожалуйста, зайдите в систему заного!"
+    return await delete_cookie(
+        response=response,
+        payload=payload,
     )
+
+
+@router.get("/private_route")
+async def auth_by_jwt_payload(
+    validate_route: Annotated[bool, Depends(auth_by_jwt_payload)],
+) -> bool:
+    return validate_route
