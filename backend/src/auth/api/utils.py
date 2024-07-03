@@ -5,6 +5,7 @@ from .exceptions import unauth_401_exc
 from auth.jwt_service import jwt_service
 
 
+# создаем jwt и кладем его в куки
 def create_jwt_and_set_cookie(
     response: Response,
     username: str,

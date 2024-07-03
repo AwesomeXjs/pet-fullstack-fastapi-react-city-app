@@ -1,7 +1,5 @@
 from typing import Annotated
 
-from pydantic import EmailStr
-from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import (
     Form,
@@ -12,9 +10,13 @@ from fastapi import (
 )
 
 from . import crud
-from .schemas import UserCreateSchema
 from dependencies.session_dep import session_dependency
-from .exceptions import not_accept_406_exc, something_wrong_400_exc
+from .schemas import (
+    UserSchema,
+    LogoutSchema,
+    UserCreateSchema,
+    UserRegisterSchema,
+)
 from dependencies.auth_dep import (
     auth_by_jwt_payload,
     get_payload_from_jwt_cookie,
@@ -28,36 +30,29 @@ router = APIRouter(prefix="/auth")
 @router.post(
     "/register",
     response_model=UserCreateSchema,
-    status_code=status.HTTP_202_ACCEPTED,
+    status_code=status.HTTP_201_CREATED,
 )
-
-# Регистрация нового пользователя
 async def register_user(
-    session: Annotated[AsyncSession, Depends(session_dependency)],
+    session: Annotated[
+        AsyncSession,
+        Depends(session_dependency),
+    ],
     responce: Response,
-    username: Annotated[str, Form(max_length=20)],
-    email: Annotated[EmailStr, Form(min_length=5)],
-    password: Annotated[str, Form(min_length=5)],
+    data: UserRegisterSchema,
 ) -> UserCreateSchema:
-    try:
-        user = await crud.create_user(
-            response=responce,
-            session=session,
-            username=username,
-            email=email,
-            password=password,
-        )
-        return user
-    except IntegrityError as e:
-        raise not_accept_406_exc(f"Пользователь {username} уже существует!")
-    except Exception:
-        raise not_accept_406_exc(
-            f"Что то пошло не так, проверьте подключение к интернету!"
-        )
+    return await crud.create_user(
+        response=responce,
+        session=session,
+        data=data,
+    )
 
 
 # Логин пользователя
-@router.post("/login")
+@router.post(
+    "/login",
+    response_model=UserCreateSchema,
+    status_code=status.HTTP_200_OK,
+)
 async def login_user(
     response: Response,
     user: Annotated[
@@ -74,7 +69,11 @@ async def login_user(
 
 
 # Логаут (удаление кук)
-@router.delete("/logout")
+@router.delete(
+    "/logout",
+    response_model=LogoutSchema,
+    status_code=status.HTTP_200_OK,
+)
 async def logout_user(
     response: Response,
     payload: Annotated[
@@ -89,7 +88,7 @@ async def logout_user(
 
 
 # Удаление пользователя
-@router.delete("/delete")
+@router.delete("/delete", response_model=UserSchema)
 async def delete_user(
     response: Response,
     user: Annotated[
@@ -99,23 +98,25 @@ async def delete_user(
     payload: Annotated[dict, Depends(get_payload_from_jwt_cookie)],
     session: Annotated[AsyncSession, Depends(session_dependency)],
 ):
-    try:
-        delete_username = await crud.delete_user(
-            response=response,
-            user=user,
-            payload=payload,
-            session=session,
-        )
-        return delete_username
-    except Exception:
-        raise something_wrong_400_exc(
-            f"Что то пошло не так! Проверьте подключение к сети!"
-        )
+    return await crud.delete_user(
+        response=response,
+        user=user,
+        payload=payload,
+        session=session,
+    )
 
 
 # проверка на валидность при переходе в другой роут ( проверка кук на юзернейм)
 @router.get("/private_route")
 async def auth_for_private_route(
-    validate_route: Annotated[bool, Depends(auth_by_jwt_payload)],
+    validate_route: Annotated[
+        bool,
+        Depends(auth_by_jwt_payload),
+    ],
 ) -> bool:
     return validate_route
+
+
+@router.get("/payload")
+async def get_payload(payload: Annotated[dict, Depends(get_payload_from_jwt_cookie)]):
+    return payload

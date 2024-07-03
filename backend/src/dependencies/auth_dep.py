@@ -9,13 +9,12 @@ from auth.jwt_service import jwt_service
 from auth.auth_service import auth_service
 from .session_dep import session_dependency
 from jwt.exceptions import InvalidTokenError
-from auth.api.schemas import UserCreateSchema
-from auth.api.exceptions import unauth_401_exc, not_accept_406_exc
+from auth.api.schemas import UserCreateSchema, UserLoginSchema
+from auth.api.exceptions import unauth_401_exc, not_accept_401_exc
 
 
 # возвращает данные из JWT токена из кук
 async def get_payload_from_jwt_cookie(
-    # token: str = Cookie(alias=jwt_service.COOKIE_ALIAS),
     token: Annotated[Union[str, None], Cookie(alias=jwt_service.COOKIE_ALIAS)] = None,
 ) -> dict:
     try:
@@ -28,16 +27,15 @@ async def get_payload_from_jwt_cookie(
 # Проверяет логин и пароль с бд и возвращает юзера
 async def login_user_by_username_and_password(
     session: Annotated[AsyncSession, Depends(session_dependency)],
-    username: Annotated[str, Form(max_length=20)],
-    password: Annotated[str, Form(min_length=5)],
+    data: UserLoginSchema,
 ) -> UserCreateSchema:
-    query = select(User).filter_by(username=username)
+    query = select(User).filter_by(username=data.username)
     result = await session.execute(query)
     user = result.scalar_one_or_none()
     if user is None:
-        raise unauth_401_exc(detail=f"Пользователь {username} не зарегистрирован")
+        raise unauth_401_exc(detail=f"Пользователь {data.username} не зарегистрирован")
     if not auth_service.validate_pass(
-        password=password,
+        password=data.password,
         hashed_password=user.hashed_password,
     ):
         raise unauth_401_exc(detail=f"Вы не правильно ввели пароль!")
@@ -52,6 +50,6 @@ async def auth_by_jwt_payload(
     if username is not None:
         return True
 
-    raise not_accept_406_exc(
+    raise not_accept_401_exc(
         f"Мы не смогли верифицировать вас, пожалуйста, зайдите в систему заного!"
     )

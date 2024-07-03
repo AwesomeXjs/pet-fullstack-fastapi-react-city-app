@@ -1,5 +1,5 @@
 import jwt
-from datetime import timedelta, datetime
+from datetime import timedelta, datetime, UTC
 
 from app_config import app_settings
 
@@ -30,7 +30,7 @@ class JWT_Service:
         expire_time_delta: timedelta | None = None,
     ) -> str:
         payload_copy = payload.copy()
-        now = datetime.utcnow()
+        now = datetime.now(UTC)
         if expire_time_delta:
             expire = now + expire_time_delta
         else:
