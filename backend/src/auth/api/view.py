@@ -2,6 +2,7 @@ from typing import Annotated
 
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import (
+    Form,
     status,
     Depends,
     Response,
@@ -21,7 +22,8 @@ from dependencies.auth_dep import (
     get_payload_from_jwt_cookie,
     login_user_by_username_and_password,
 )
-from .utils import create_jwt_and_set_cookie, delete_cookie
+from .exceptions import something_wrong_400_exc
+from .utils import create_jwt_and_set_cookie, delete_cookie, validate_user_by_username
 
 router = APIRouter(prefix="/auth")
 
@@ -87,7 +89,7 @@ async def logout_user(
 
 
 # Удаление пользователя
-@router.post("/delete", response_model=UserSchema)
+@router.post("/delete", response_model=UserCreateSchema)
 async def delete_user(
     response: Response,
     user: Annotated[
@@ -119,3 +121,17 @@ async def auth_for_private_route(
 @router.get("/payload")
 async def get_payload(payload: Annotated[dict, Depends(get_payload_from_jwt_cookie)]):
     return payload
+
+
+@router.patch("/update")
+async def update_user(
+    new_username: str,
+    session: Annotated[AsyncSession, Depends(session_dependency)],
+    payload: Annotated[dict, Depends(get_payload_from_jwt_cookie)],
+    user: UserCreateSchema = Depends(login_user_by_username_and_password),
+) -> UserCreateSchema:
+
+    if validate_user_by_username(payload=payload, user=user):
+        setattr(user, "username", new_username)
+        await session.commit()
+        return user

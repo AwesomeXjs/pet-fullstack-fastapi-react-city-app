@@ -1,15 +1,7 @@
 from fastapi import HTTPException, status
 
 
-def not_accept_401_exc(detail: str):
-    not_accept = HTTPException(
-        status_code=status.HTTP_401_UNAUTHORIZED,
-        detail=detail,
-    )
-    return not_accept
-
-
-def already_exist_406_exc(detail: str):
+def not_accept_406_exc(detail: str):
     not_accept = HTTPException(
         status_code=status.HTTP_406_NOT_ACCEPTABLE,
         detail=detail,

@@ -10,7 +10,7 @@ from auth.auth_service import auth_service
 from .session_dep import session_dependency
 from jwt.exceptions import InvalidTokenError
 from auth.api.schemas import UserCreateSchema, UserLoginSchema
-from auth.api.exceptions import unauth_401_exc, not_accept_401_exc
+from auth.api.exceptions import unauth_401_exc, not_accept_406_exc
 
 
 # возвращает данные из JWT токена из кук
@@ -39,7 +39,7 @@ async def login_user_by_username_and_password(
         hashed_password=user.hashed_password,
     ):
         raise unauth_401_exc(detail=f"Вы не правильно ввели пароль!")
-    return user
+    return UserCreateSchema(email=user.email, username=user.username)
 
 
 # проверяет куки на юзернейм, если он там есть - возвращает True, либо выдает ошибку
@@ -50,6 +50,6 @@ async def auth_by_jwt_payload(
     if username is not None:
         return True
 
-    raise not_accept_401_exc(
+    raise not_accept_406_exc(
         f"Мы не смогли верифицировать вас, пожалуйста, зайдите в систему заного!"
     )

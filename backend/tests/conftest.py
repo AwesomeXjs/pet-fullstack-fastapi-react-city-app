@@ -2,12 +2,12 @@ from typing import AsyncGenerator
 from httpx import ASGITransport, AsyncClient
 
 import pytest
-from sqlalchemy import NullPool, delete, insert
+from sqlalchemy import NullPool, select
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 
 from main import app
 from db import db_settings
-from db.models import Base, User
+from db.models import Base
 from dependencies.session_dep import session_dependency
 
 
@@ -46,3 +46,11 @@ async def ac() -> AsyncGenerator[AsyncClient, None]:
         transport=ASGITransport(app=app), base_url="http://test"
     ) as ac:
         yield ac
+
+
+async def check_item_in_db(model, **filter_by):
+    async with session_factory_test() as session:
+        query = select(model).filter_by(**filter_by)
+        result = await session.execute(query)
+        item = result.scalar_one_or_none()
+        return item

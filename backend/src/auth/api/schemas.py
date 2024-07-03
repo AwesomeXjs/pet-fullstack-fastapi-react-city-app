@@ -16,6 +16,11 @@ class UserLoginSchema(BaseModel):
     password: str = Field(min_length=5)
 
 
+class UserUpdateSchema(BaseModel):
+    username: str | None = None
+    password: str | None = None
+
+
 class UserSchema(UserCreateSchema):
     id: int
 

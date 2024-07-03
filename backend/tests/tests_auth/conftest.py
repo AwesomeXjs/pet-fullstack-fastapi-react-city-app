@@ -1,4 +1,5 @@
 import pytest
+from httpx import AsyncClient
 from sqlalchemy import insert, delete
 
 from db.models.user import User
@@ -35,3 +36,9 @@ async def delete_users_fixture():
         stmt = delete(User)
         await session.execute(stmt)
         await session.commit()
+
+
+@pytest.fixture
+async def create_user_fixture(ac: AsyncClient, user_data):
+    create_users = await ac.post("/auth/register", json=user_data)
+    yield

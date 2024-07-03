@@ -5,12 +5,10 @@ from sqlalchemy.ext.asyncio import AsyncSession
 
 from db.models import User
 from auth.auth_service import auth_service
-from .utils import create_jwt_and_set_cookie, delete_cookie
 from .schemas import UserCreateSchema, UserSchema, UserRegisterSchema
+from .utils import create_jwt_and_set_cookie, delete_cookie, validate_user_by_username
 from .exceptions import (
-    unauth_401_exc,
-    not_accept_401_exc,
-    already_exist_406_exc,
+    not_accept_406_exc,
     something_wrong_400_exc,
 )
 
@@ -39,25 +37,22 @@ async def create_user(
             email=data.email,
         )
     except IntegrityError as e:
-        raise already_exist_406_exc(f"Пользователь {data.username} уже существует!")
+        raise not_accept_406_exc(f"Пользователь {data.username} уже существует!")
     except Exception:
-        raise not_accept_401_exc(
+        raise something_wrong_400_exc(
             f"Что то пошло не так, проверьте подключение к интернету!"
         )
 
 
 async def delete_user(
     payload: dict,
-    user: User,
+    user: UserCreateSchema,
     session: AsyncSession,
     response: Response,
 ) -> UserSchema:
     try:
-        username_from_payload = payload.get("username")
-        if username_from_payload is None:
-            raise unauth_401_exc(f"Юзер {username_from_payload} не найден")
-        if user.username == username_from_payload:
-            stmt = delete(User).where(User.username == username_from_payload)
+        if validate_user_by_username(payload=payload, user=user):
+            stmt = delete(User).where(User.username == payload.get("username"))
             await session.execute(stmt)
             await delete_cookie(
                 payload=payload,
@@ -65,7 +60,7 @@ async def delete_user(
             )
             await session.commit()
         return user
-    except Exception:
+    except Exception as e:
         raise something_wrong_400_exc(
-            f"Что то пошло не так! Проверьте подключение к сети!"
+            f"Что то пошло не так! Проверьте подключение к сети! {e}"
         )

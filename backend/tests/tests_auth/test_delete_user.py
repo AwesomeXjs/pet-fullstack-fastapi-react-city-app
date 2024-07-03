@@ -1,17 +1,22 @@
 from httpx import AsyncClient
 
+from db.models import User
+from tests.conftest import check_item_in_db
 
-async def test_delete_user(ac: AsyncClient, user_data):
-    create_user_with_hashed_pass = await ac.post("/auth/register", json=user_data)
+
+async def test_delete_user(ac: AsyncClient, user_data, create_user_fixture):
     response = await ac.post(
         "/auth/delete",
         json={"username": user_data["username"], "password": user_data["password"]},
     )
+    item = await check_item_in_db(model=User, username=user_data["username"])
     assert response.status_code == 200, response
+    assert item == None
 
 
-async def test_delete_unregistered_user(ac: AsyncClient, user_data):
-    create_user_with_hashed_pass = await ac.post("/auth/register", json=user_data)
+async def test_delete_unregistered_user(
+    ac: AsyncClient, user_data, create_user_fixture
+):
     response = await ac.post(
         "/auth/delete", json={"username": "Nick", "password": "1234535"}
     )

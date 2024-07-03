@@ -1,8 +1,10 @@
 from fastapi import Response
 
+from db.models.user import User
 from app_config import app_settings
 from .exceptions import unauth_401_exc
 from auth.jwt_service import jwt_service
+from auth.api.schemas import UserCreateSchema
 
 
 # создаем jwt и кладем его в куки
@@ -32,3 +34,13 @@ async def delete_cookie(payload: dict, response: Response):
         "Status": "OK",
         "data": f"До свидания, {username}!",
     }
+
+
+# сверяет юзера в jwt и юзера в бд и делает апдейт
+def validate_user_by_username(payload: dict, user: UserCreateSchema) -> bool:
+    username_from_payload = payload.get("username")
+    if username_from_payload is None:
+        raise unauth_401_exc(f"Юзер в токене не найден")
+    if user.username == username_from_payload:
+        return True
+    raise unauth_401_exc(f"Такой юзер не найден.")
