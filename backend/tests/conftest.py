@@ -2,12 +2,12 @@ from typing import AsyncGenerator
 from httpx import ASGITransport, AsyncClient
 
 import pytest
-from sqlalchemy import NullPool
+from sqlalchemy import NullPool, delete, insert
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 
 from main import app
 from db import db_settings
-from db.models import Base
+from db.models import Base, User
 from dependencies.session_dep import session_dependency
 
 
@@ -46,13 +46,3 @@ async def ac() -> AsyncGenerator[AsyncClient, None]:
         transport=ASGITransport(app=app), base_url="http://test"
     ) as ac:
         yield ac
-
-
-@pytest.fixture
-def new_user_fixture():
-    user = {
-        "username": "awsx",
-        "email": "awsx@gmail.com",
-        "password": "awsx5",
-    }
-    return user

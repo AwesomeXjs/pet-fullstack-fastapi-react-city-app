@@ -7,7 +7,12 @@ from db.models import User
 from auth.auth_service import auth_service
 from .utils import create_jwt_and_set_cookie, delete_cookie
 from .schemas import UserCreateSchema, UserSchema, UserRegisterSchema
-from .exceptions import unauth_401_exc, something_wrong_400_exc, not_accept_401_exc
+from .exceptions import (
+    unauth_401_exc,
+    not_accept_401_exc,
+    already_exist_406_exc,
+    something_wrong_400_exc,
+)
 
 
 async def create_user(
@@ -34,7 +39,7 @@ async def create_user(
             email=data.email,
         )
     except IntegrityError as e:
-        raise not_accept_401_exc(f"Пользователь {data.username} уже существует!")
+        raise already_exist_406_exc(f"Пользователь {data.username} уже существует!")
     except Exception:
         raise not_accept_401_exc(
             f"Что то пошло не так, проверьте подключение к интернету!"

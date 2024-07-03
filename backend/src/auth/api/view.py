@@ -2,7 +2,6 @@ from typing import Annotated
 
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import (
-    Form,
     status,
     Depends,
     Response,
@@ -88,7 +87,7 @@ async def logout_user(
 
 
 # Удаление пользователя
-@router.delete("/delete", response_model=UserSchema)
+@router.post("/delete", response_model=UserSchema)
 async def delete_user(
     response: Response,
     user: Annotated[

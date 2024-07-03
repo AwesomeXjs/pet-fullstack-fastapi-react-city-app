@@ -1,0 +1,4 @@
+tests/
+.vscode
+.pytest_cache
+venv
