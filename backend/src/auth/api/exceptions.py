@@ -15,3 +15,10 @@ def unauth_401_exc(detail: str):
         detail=detail,
     )
     return unregistered_exc
+
+
+def something_wrong_400_exc(detail: str):
+    something_wrong_exc = HTTPException(
+        status_code=status.HTTP_400_BAD_REQUEST, detail=detail
+    )
+    return something_wrong_exc

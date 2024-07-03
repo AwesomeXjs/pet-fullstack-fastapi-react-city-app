@@ -13,8 +13,8 @@ from fastapi import (
 
 from . import crud
 from .schemas import UserCreateSchema
-from .exceptions import not_accept_406_exc
 from dependencies.session_dep import session_dependency
+from .exceptions import not_accept_406_exc, something_wrong_400_exc
 from dependencies.auth_dep import (
     auth_by_jwt_payload,
     get_payload_from_jwt_cookie,
@@ -30,6 +30,8 @@ router = APIRouter(prefix="/auth")
     response_model=UserCreateSchema,
     status_code=status.HTTP_202_ACCEPTED,
 )
+
+# Регистрация нового пользователя
 async def register_user(
     session: Annotated[AsyncSession, Depends(session_dependency)],
     responce: Response,
@@ -54,6 +56,7 @@ async def register_user(
         )
 
 
+# Логин пользователя
 @router.post("/login")
 async def login_user(
     response: Response,
@@ -70,6 +73,7 @@ async def login_user(
     return user
 
 
+# Логаут (удаление кук)
 @router.delete("/logout")
 async def logout_user(
     response: Response,
@@ -84,6 +88,32 @@ async def logout_user(
     )
 
 
+# Удаление пользователя
+@router.delete("/delete")
+async def delete_user(
+    response: Response,
+    user: Annotated[
+        UserCreateSchema,
+        Depends(login_user_by_username_and_password),
+    ],
+    payload: Annotated[dict, Depends(get_payload_from_jwt_cookie)],
+    session: Annotated[AsyncSession, Depends(session_dependency)],
+):
+    try:
+        delete_username = await crud.delete_user(
+            response=response,
+            user=user,
+            payload=payload,
+            session=session,
+        )
+        return delete_username
+    except Exception:
+        raise something_wrong_400_exc(
+            f"Что то пошло не так! Проверьте подключение к сети!"
+        )
+
+
+# проверка на валидность при переходе в другой роут ( проверка кук на юзернейм)
 @router.get("/private_route")
 async def auth_for_private_route(
     validate_route: Annotated[bool, Depends(auth_by_jwt_payload)],
