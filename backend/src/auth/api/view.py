@@ -12,7 +12,6 @@ from fastapi import (
 from . import crud
 from dependencies.session_dep import session_dependency
 from .schemas import (
-    UserSchema,
     LogoutSchema,
     UserCreateSchema,
     UserRegisterSchema,
@@ -61,16 +60,15 @@ async def login_user(
         Depends(login_user_by_username_and_password),
     ],
 ) -> UserCreateSchema:
-    create_jwt_and_set_cookie(
+    await create_jwt_and_set_cookie(
         response=response,
-        email=user.email,
         username=user.username,
     )
     return user
 
 
 # Логаут (удаление кук)
-@router.delete(
+@router.post(
     "/logout",
     response_model=LogoutSchema,
     status_code=status.HTTP_200_OK,
@@ -89,19 +87,16 @@ async def logout_user(
 
 
 # Удаление пользователя
-@router.post("/delete", response_model=UserCreateSchema)
+@router.post("/delete")
 async def delete_user(
     response: Response,
-    user: Annotated[
-        UserCreateSchema,
-        Depends(login_user_by_username_and_password),
-    ],
+    username: str,
     payload: Annotated[dict, Depends(get_payload_from_jwt_cookie)],
     session: Annotated[AsyncSession, Depends(session_dependency)],
 ):
     return await crud.delete_user(
+        username=username,
         response=response,
-        user=user,
         payload=payload,
         session=session,
     )
@@ -110,12 +105,12 @@ async def delete_user(
 # проверка на валидность при переходе в другой роут ( проверка кук на юзернейм)
 @router.get("/private_route")
 async def auth_for_private_route(
-    validate_route: Annotated[
-        bool,
+    username_from_payload: Annotated[
+        str,
         Depends(auth_by_jwt_payload),
     ],
-) -> bool:
-    return validate_route
+) -> str:
+    return username_from_payload
 
 
 @router.get("/payload")
@@ -125,13 +120,17 @@ async def get_payload(payload: Annotated[dict, Depends(get_payload_from_jwt_cook
 
 @router.patch("/update")
 async def update_user(
+    response: Response,
     new_username: str,
     session: Annotated[AsyncSession, Depends(session_dependency)],
     payload: Annotated[dict, Depends(get_payload_from_jwt_cookie)],
     user: UserCreateSchema = Depends(login_user_by_username_and_password),
 ) -> UserCreateSchema:
 
-    if validate_user_by_username(payload=payload, user=user):
-        setattr(user, "username", new_username)
-        await session.commit()
-        return user
+    return await crud.update_username(
+        response=response,
+        new_username=new_username,
+        session=session,
+        payload=payload,
+        user=user,
+    )

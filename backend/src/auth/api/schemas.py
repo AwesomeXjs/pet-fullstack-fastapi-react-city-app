@@ -3,7 +3,6 @@ from pydantic import BaseModel, ConfigDict, Field
 
 class UserCreateSchema(BaseModel):
     username: str = Field(max_length=20)
-    email: str = Field(min_length=5)
     model_config = ConfigDict()
 
 

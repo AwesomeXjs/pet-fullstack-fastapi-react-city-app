@@ -10,7 +10,6 @@ from tests.conftest import session_factory_test
 def user_data():
     user = {
         "username": "awsx",
-        "email": "awsx@gmail.com",
         "password": "awsx5",
     }
     return user
@@ -21,7 +20,6 @@ async def create_user_fixture():
     async with session_factory_test() as session:
         stmt = insert(User).values(
             username="awsx",
-            email="awsx@gmail.com",
             hashed_password="awsx5",
         )
         await session.execute(stmt)

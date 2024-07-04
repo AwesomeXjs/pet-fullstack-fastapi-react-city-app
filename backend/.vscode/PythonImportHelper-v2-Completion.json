@@ -1,0 +1,1308 @@
+[
+    {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Sequence",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Union",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncGenerator",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "op",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "context",
+        "importPath": "alembic",
+        "description": "alembic",
+        "isExtraImport": true,
+        "detail": "alembic",
+        "documentation": {}
+    },
+    {
+        "label": "sqlalchemy",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "pool",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "insert",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "delete",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "insert",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "delete",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "NullPool",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "fileConfig",
+        "importPath": "logging.config",
+        "description": "logging.config",
+        "isExtraImport": true,
+        "detail": "logging.config",
+        "documentation": {}
+    },
+    {
+        "label": "Connection",
+        "importPath": "sqlalchemy.engine",
+        "description": "sqlalchemy.engine",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.engine",
+        "documentation": {}
+    },
+    {
+        "label": "async_engine_from_config",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "create_async_engine",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "async_sessionmaker",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "create_async_engine",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "async_sessionmaker",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "db_settings",
+        "importPath": "src.db",
+        "description": "src.db",
+        "isExtraImport": true,
+        "detail": "src.db",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "src.db.models",
+        "description": "src.db.models",
+        "isExtraImport": true,
+        "detail": "src.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Response",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Cookie",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "IntegrityError",
+        "importPath": "sqlalchemy.exc",
+        "description": "sqlalchemy.exc",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.exc",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "db.models",
+        "description": "db.models",
+        "isExtraImport": true,
+        "detail": "db.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "db.models",
+        "description": "db.models",
+        "isExtraImport": true,
+        "detail": "db.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "db.models",
+        "description": "db.models",
+        "isExtraImport": true,
+        "detail": "db.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "db.models",
+        "description": "db.models",
+        "isExtraImport": true,
+        "detail": "db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "db.models",
+        "description": "db.models",
+        "isExtraImport": true,
+        "detail": "db.models",
+        "documentation": {}
+    },
+    {
+        "label": "auth_service",
+        "importPath": "auth.auth_service",
+        "description": "auth.auth_service",
+        "isExtraImport": true,
+        "detail": "auth.auth_service",
+        "documentation": {}
+    },
+    {
+        "label": "auth_service",
+        "importPath": "auth.auth_service",
+        "description": "auth.auth_service",
+        "isExtraImport": true,
+        "detail": "auth.auth_service",
+        "documentation": {}
+    },
+    {
+        "label": "unauth_401_exc",
+        "importPath": "auth.api.exceptions",
+        "description": "auth.api.exceptions",
+        "isExtraImport": true,
+        "detail": "auth.api.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "unauth_401_exc",
+        "importPath": "auth.api.exceptions",
+        "description": "auth.api.exceptions",
+        "isExtraImport": true,
+        "detail": "auth.api.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "not_accept_406_exc",
+        "importPath": "auth.api.exceptions",
+        "description": "auth.api.exceptions",
+        "isExtraImport": true,
+        "detail": "auth.api.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigDict",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "db.models.user",
+        "description": "db.models.user",
+        "isExtraImport": true,
+        "detail": "db.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "db.models.user",
+        "description": "db.models.user",
+        "isExtraImport": true,
+        "detail": "db.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "app_settings",
+        "importPath": "app_config",
+        "description": "app_config",
+        "isExtraImport": true,
+        "detail": "app_config",
+        "documentation": {}
+    },
+    {
+        "label": "app_settings",
+        "importPath": "app_config",
+        "description": "app_config",
+        "isExtraImport": true,
+        "detail": "app_config",
+        "documentation": {}
+    },
+    {
+        "label": "app_settings",
+        "importPath": "app_config",
+        "description": "app_config",
+        "isExtraImport": true,
+        "detail": "app_config",
+        "documentation": {}
+    },
+    {
+        "label": "jwt_service",
+        "importPath": "auth.jwt_service",
+        "description": "auth.jwt_service",
+        "isExtraImport": true,
+        "detail": "auth.jwt_service",
+        "documentation": {}
+    },
+    {
+        "label": "jwt_service",
+        "importPath": "auth.jwt_service",
+        "description": "auth.jwt_service",
+        "isExtraImport": true,
+        "detail": "auth.jwt_service",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreateSchema",
+        "importPath": "auth.api.schemas",
+        "description": "auth.api.schemas",
+        "isExtraImport": true,
+        "detail": "auth.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreateSchema",
+        "importPath": "auth.api.schemas",
+        "description": "auth.api.schemas",
+        "isExtraImport": true,
+        "detail": "auth.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserLoginSchema",
+        "importPath": "auth.api.schemas",
+        "description": "auth.api.schemas",
+        "isExtraImport": true,
+        "detail": "auth.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "session_dependency",
+        "importPath": "dependencies.session_dep",
+        "description": "dependencies.session_dep",
+        "isExtraImport": true,
+        "detail": "dependencies.session_dep",
+        "documentation": {}
+    },
+    {
+        "label": "session_dependency",
+        "importPath": "dependencies.session_dep",
+        "description": "dependencies.session_dep",
+        "isExtraImport": true,
+        "detail": "dependencies.session_dep",
+        "documentation": {}
+    },
+    {
+        "label": "auth_by_jwt_payload",
+        "importPath": "dependencies.auth_dep",
+        "description": "dependencies.auth_dep",
+        "isExtraImport": true,
+        "detail": "dependencies.auth_dep",
+        "documentation": {}
+    },
+    {
+        "label": "get_payload_from_jwt_cookie",
+        "importPath": "dependencies.auth_dep",
+        "description": "dependencies.auth_dep",
+        "isExtraImport": true,
+        "detail": "dependencies.auth_dep",
+        "documentation": {}
+    },
+    {
+        "label": "login_user_by_username_and_password",
+        "importPath": "dependencies.auth_dep",
+        "description": "dependencies.auth_dep",
+        "isExtraImport": true,
+        "detail": "dependencies.auth_dep",
+        "documentation": {}
+    },
+    {
+        "label": "bcrypt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "bcrypt",
+        "description": "bcrypt",
+        "detail": "bcrypt",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jwt",
+        "description": "jwt",
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "UTC",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "Mapped",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "mapped_column",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "DeclarativeBase",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "declared_attr",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Mapped",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "mapped_column",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "BaseSettings",
+        "importPath": "pydantic_settings",
+        "description": "pydantic_settings",
+        "isExtraImport": true,
+        "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "SettingsConfigDict",
+        "importPath": "pydantic_settings",
+        "description": "pydantic_settings",
+        "isExtraImport": true,
+        "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "BaseSettings",
+        "importPath": "pydantic_settings",
+        "description": "pydantic_settings",
+        "isExtraImport": true,
+        "detail": "pydantic_settings",
+        "documentation": {}
+    },
+    {
+        "label": "InvalidTokenError",
+        "importPath": "jwt.exceptions",
+        "description": "jwt.exceptions",
+        "isExtraImport": true,
+        "detail": "jwt.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "db_helper",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "db_settings",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "uvicorn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uvicorn",
+        "description": "uvicorn",
+        "detail": "uvicorn",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "api",
+        "description": "api",
+        "isExtraImport": true,
+        "detail": "api",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "auth.api.view",
+        "description": "auth.api.view",
+        "isExtraImport": true,
+        "detail": "auth.api.view",
+        "documentation": {}
+    },
+    {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncClient",
+        "importPath": "httpx",
+        "description": "httpx",
+        "isExtraImport": true,
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncClient",
+        "importPath": "httpx",
+        "description": "httpx",
+        "isExtraImport": true,
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncClient",
+        "importPath": "httpx",
+        "description": "httpx",
+        "isExtraImport": true,
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncClient",
+        "importPath": "httpx",
+        "description": "httpx",
+        "isExtraImport": true,
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncClient",
+        "importPath": "httpx",
+        "description": "httpx",
+        "isExtraImport": true,
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncClient",
+        "importPath": "httpx",
+        "description": "httpx",
+        "isExtraImport": true,
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncClient",
+        "importPath": "httpx",
+        "description": "httpx",
+        "isExtraImport": true,
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "ASGITransport",
+        "importPath": "httpx",
+        "description": "httpx",
+        "isExtraImport": true,
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncClient",
+        "importPath": "httpx",
+        "description": "httpx",
+        "isExtraImport": true,
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "session_factory_test",
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "isExtraImport": true,
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "check_item_in_db",
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "isExtraImport": true,
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "check_item_in_db",
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "isExtraImport": true,
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "importPath": "main",
+        "description": "main",
+        "isExtraImport": true,
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.2024_07_02_1709-8d6ed679dbf7_create_user_table",
+        "description": "alembic.versions.2024_07_02_1709-8d6ed679dbf7_create_user_table",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"users\",\n        sa.Column(\"username\", sa.String(length=20), nullable=False),\n        sa.Column(\"email\", sa.String(), nullable=False),\n        sa.Column(\"hashed_password\", sa.String(), nullable=False),\n        sa.Column(\"id\", sa.Integer(), nullable=False),\n        sa.PrimaryKeyConstraint(\"id\"),\n        sa.UniqueConstraint(\"email\"),",
+        "detail": "alembic.versions.2024_07_02_1709-8d6ed679dbf7_create_user_table",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.2024_07_02_1709-8d6ed679dbf7_create_user_table",
+        "description": "alembic.versions.2024_07_02_1709-8d6ed679dbf7_create_user_table",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table(\"users\")\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.2024_07_02_1709-8d6ed679dbf7_create_user_table",
+        "documentation": {}
+    },
+    {
+        "label": "upgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.2024_07_03_2231-2d9a345123d6_remove_email",
+        "description": "alembic.versions.2024_07_03_2231-2d9a345123d6_remove_email",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_constraint(\"users_email_key\", \"users\", type_=\"unique\")\n    op.drop_column(\"users\", \"email\")\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column(\n        \"users\",\n        sa.Column(\"email\", sa.VARCHAR(), autoincrement=False, nullable=False),",
+        "detail": "alembic.versions.2024_07_03_2231-2d9a345123d6_remove_email",
+        "documentation": {}
+    },
+    {
+        "label": "downgrade",
+        "kind": 2,
+        "importPath": "alembic.versions.2024_07_03_2231-2d9a345123d6_remove_email",
+        "description": "alembic.versions.2024_07_03_2231-2d9a345123d6_remove_email",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column(\n        \"users\",\n        sa.Column(\"email\", sa.VARCHAR(), autoincrement=False, nullable=False),\n    )\n    op.create_unique_constraint(\"users_email_key\", \"users\", [\"email\"])\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.2024_07_03_2231-2d9a345123d6_remove_email",
+        "documentation": {}
+    },
+    {
+        "label": "run_migrations_offline",
+        "kind": 2,
+        "importPath": "alembic.env",
+        "description": "alembic.env",
+        "peekOfCode": "def run_migrations_offline() -> None:\n    \"\"\"Run migrations in 'offline' mode.\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation\n    we don't even need a DBAPI to be available.\n    Calls to context.execute() here emit the given string to the\n    script output.\n    \"\"\"\n    url = config.get_main_option(\"sqlalchemy.url\")",
+        "detail": "alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "do_run_migrations",
+        "kind": 2,
+        "importPath": "alembic.env",
+        "description": "alembic.env",
+        "peekOfCode": "def do_run_migrations(connection: Connection) -> None:\n    context.configure(connection=connection, target_metadata=target_metadata)\n    with context.begin_transaction():\n        context.run_migrations()\nasync def run_async_migrations() -> None:\n    \"\"\"In this scenario we need to create an Engine\n    and associate a connection with the context.\n    \"\"\"\n    connectable = async_engine_from_config(\n        config.get_section(config.config_ini_section, {}),",
+        "detail": "alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "run_migrations_online",
+        "kind": 2,
+        "importPath": "alembic.env",
+        "description": "alembic.env",
+        "peekOfCode": "def run_migrations_online() -> None:\n    \"\"\"Run migrations in 'online' mode.\"\"\"\n    asyncio.run(run_async_migrations())\nif context.is_offline_mode():\n    run_migrations_offline()\nelse:\n    run_migrations_online()",
+        "detail": "alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "kind": 5,
+        "importPath": "alembic.env",
+        "description": "alembic.env",
+        "peekOfCode": "config = context.config\nconfig.set_main_option(\n    \"sqlalchemy.url\",\n    db_settings.postgres_db_url,\n)\n# Interpret the config file for Python logging.\n# This line sets up loggers basically.\nif config.config_file_name is not None:\n    fileConfig(config.config_file_name)\n# add your model's MetaData object here",
+        "detail": "alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "target_metadata",
+        "kind": 5,
+        "importPath": "alembic.env",
+        "description": "alembic.env",
+        "peekOfCode": "target_metadata = Base.metadata\n# other values from the config, defined by the needs of env.py,\n# can be acquired:\n# my_important_option = config.get_main_option(\"my_important_option\")\n# ... etc.\ndef run_migrations_offline() -> None:\n    \"\"\"Run migrations in 'offline' mode.\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation",
+        "detail": "alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "not_accept_406_exc",
+        "kind": 2,
+        "importPath": "src.auth.api.exceptions",
+        "description": "src.auth.api.exceptions",
+        "peekOfCode": "def not_accept_406_exc(detail: str):\n    not_accept = HTTPException(\n        status_code=status.HTTP_406_NOT_ACCEPTABLE,\n        detail=detail,\n    )\n    return not_accept\ndef unauth_401_exc(detail: str):\n    unregistered_exc = HTTPException(\n        status_code=status.HTTP_401_UNAUTHORIZED,\n        detail=detail,",
+        "detail": "src.auth.api.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "unauth_401_exc",
+        "kind": 2,
+        "importPath": "src.auth.api.exceptions",
+        "description": "src.auth.api.exceptions",
+        "peekOfCode": "def unauth_401_exc(detail: str):\n    unregistered_exc = HTTPException(\n        status_code=status.HTTP_401_UNAUTHORIZED,\n        detail=detail,\n    )\n    return unregistered_exc\ndef something_wrong_400_exc(detail: str):\n    something_wrong_exc = HTTPException(\n        status_code=status.HTTP_400_BAD_REQUEST, detail=detail\n    )",
+        "detail": "src.auth.api.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "something_wrong_400_exc",
+        "kind": 2,
+        "importPath": "src.auth.api.exceptions",
+        "description": "src.auth.api.exceptions",
+        "peekOfCode": "def something_wrong_400_exc(detail: str):\n    something_wrong_exc = HTTPException(\n        status_code=status.HTTP_400_BAD_REQUEST, detail=detail\n    )\n    return something_wrong_exc",
+        "detail": "src.auth.api.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "UserCreateSchema",
+        "kind": 6,
+        "importPath": "src.auth.api.schemas",
+        "description": "src.auth.api.schemas",
+        "peekOfCode": "class UserCreateSchema(BaseModel):\n    username: str = Field(max_length=20)\n    model_config = ConfigDict()\nclass UserRegisterSchema(UserCreateSchema):\n    password: str = Field(min_length=5)\nclass UserLoginSchema(BaseModel):\n    username: str = Field(max_length=20)\n    password: str = Field(min_length=5)\nclass UserUpdateSchema(BaseModel):\n    username: str | None = None",
+        "detail": "src.auth.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserRegisterSchema",
+        "kind": 6,
+        "importPath": "src.auth.api.schemas",
+        "description": "src.auth.api.schemas",
+        "peekOfCode": "class UserRegisterSchema(UserCreateSchema):\n    password: str = Field(min_length=5)\nclass UserLoginSchema(BaseModel):\n    username: str = Field(max_length=20)\n    password: str = Field(min_length=5)\nclass UserUpdateSchema(BaseModel):\n    username: str | None = None\n    password: str | None = None\nclass UserSchema(UserCreateSchema):\n    id: int",
+        "detail": "src.auth.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserLoginSchema",
+        "kind": 6,
+        "importPath": "src.auth.api.schemas",
+        "description": "src.auth.api.schemas",
+        "peekOfCode": "class UserLoginSchema(BaseModel):\n    username: str = Field(max_length=20)\n    password: str = Field(min_length=5)\nclass UserUpdateSchema(BaseModel):\n    username: str | None = None\n    password: str | None = None\nclass UserSchema(UserCreateSchema):\n    id: int\nclass LogoutSchema(BaseModel):\n    Status: str",
+        "detail": "src.auth.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserUpdateSchema",
+        "kind": 6,
+        "importPath": "src.auth.api.schemas",
+        "description": "src.auth.api.schemas",
+        "peekOfCode": "class UserUpdateSchema(BaseModel):\n    username: str | None = None\n    password: str | None = None\nclass UserSchema(UserCreateSchema):\n    id: int\nclass LogoutSchema(BaseModel):\n    Status: str\n    data: str",
+        "detail": "src.auth.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "UserSchema",
+        "kind": 6,
+        "importPath": "src.auth.api.schemas",
+        "description": "src.auth.api.schemas",
+        "peekOfCode": "class UserSchema(UserCreateSchema):\n    id: int\nclass LogoutSchema(BaseModel):\n    Status: str\n    data: str",
+        "detail": "src.auth.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "LogoutSchema",
+        "kind": 6,
+        "importPath": "src.auth.api.schemas",
+        "description": "src.auth.api.schemas",
+        "peekOfCode": "class LogoutSchema(BaseModel):\n    Status: str\n    data: str",
+        "detail": "src.auth.api.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "create_jwt_and_set_cookie",
+        "kind": 2,
+        "importPath": "src.auth.api.utils",
+        "description": "src.auth.api.utils",
+        "peekOfCode": "def create_jwt_and_set_cookie(\n    response: Response,\n    username: str,\n):\n    access_token = jwt_service.create_jwt(\n        token_data={\n            \"username\": username,\n        },\n        expire_minutes=app_settings.jwt_settings.access_token_expire_minutes,\n    )",
+        "detail": "src.auth.api.utils",
+        "documentation": {}
+    },
+    {
+        "label": "validate_user_by_username",
+        "kind": 2,
+        "importPath": "src.auth.api.utils",
+        "description": "src.auth.api.utils",
+        "peekOfCode": "def validate_user_by_username(payload: dict, user: UserCreateSchema) -> bool:\n    username_from_payload = payload.get(\"username\")\n    if username_from_payload is None:\n        raise unauth_401_exc(f\"Юзер в токене не найден\")\n    if user.username == username_from_payload:\n        return True\n    raise unauth_401_exc(f\"Такой юзер не найден.\")",
+        "detail": "src.auth.api.utils",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "src.auth.api.view",
+        "description": "src.auth.api.view",
+        "peekOfCode": "router = APIRouter(prefix=\"/auth\")\n@router.post(\n    \"/register\",\n    response_model=UserCreateSchema,\n    status_code=status.HTTP_201_CREATED,\n)\nasync def register_user(\n    session: Annotated[\n        AsyncSession,\n        Depends(session_dependency),",
+        "detail": "src.auth.api.view",
+        "documentation": {}
+    },
+    {
+        "label": "AuthService",
+        "kind": 6,
+        "importPath": "src.auth.auth_service",
+        "description": "src.auth.auth_service",
+        "peekOfCode": "class AuthService:\n    # хешируем пароль указаный при регистрации\n    def hash_password(self, password: str) -> str:\n        salt = bcrypt.gensalt()\n        pwd_bytes: bytes = password.encode()\n        return bcrypt.hashpw(pwd_bytes, salt).decode()\n    # хешируем введенный пароль и сверяеми с хешем в базе данных\n    def validate_pass(\n        self,\n        password: str,",
+        "detail": "src.auth.auth_service",
+        "documentation": {}
+    },
+    {
+        "label": "auth_service",
+        "kind": 5,
+        "importPath": "src.auth.auth_service",
+        "description": "src.auth.auth_service",
+        "peekOfCode": "auth_service = AuthService()",
+        "detail": "src.auth.auth_service",
+        "documentation": {}
+    },
+    {
+        "label": "JWT_Service",
+        "kind": 6,
+        "importPath": "src.auth.jwt_service",
+        "description": "src.auth.jwt_service",
+        "peekOfCode": "class JWT_Service:\n    def __init__(\n        self,\n        TOKEN_TYPE_FIELD: str,\n        ACCESS_TOKEN_TYPE: str,\n        PRIVATE_KEY: str,\n        PUBLIC_KEY: str,\n        ALGORITHM: str,\n        COOKIE_ALIAS: str,\n        token_expire_minutes: int,",
+        "detail": "src.auth.jwt_service",
+        "documentation": {}
+    },
+    {
+        "label": "jwt_service",
+        "kind": 5,
+        "importPath": "src.auth.jwt_service",
+        "description": "src.auth.jwt_service",
+        "peekOfCode": "jwt_service = JWT_Service(\n    TOKEN_TYPE_FIELD=\"type\",\n    ACCESS_TOKEN_TYPE=\"access\",\n    PRIVATE_KEY=app_settings.jwt_settings.private_key_path,\n    PUBLIC_KEY=app_settings.jwt_settings.public_key_path,\n    ALGORITHM=app_settings.jwt_settings.algorithm,\n    token_expire_minutes=app_settings.jwt_settings.access_token_expire_minutes,\n    COOKIE_ALIAS=app_settings.jwt_settings.cookie_alias,\n)",
+        "detail": "src.auth.jwt_service",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "src.db.models.user",
+        "description": "src.db.models.user",
+        "peekOfCode": "class User(Base):\n    username: Mapped[str] = mapped_column(String(20), unique=True)\n    hashed_password: Mapped[str]",
+        "detail": "src.db.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "kind": 6,
+        "importPath": "src.db.models._base",
+        "description": "src.db.models._base",
+        "peekOfCode": "class Base(DeclarativeBase):\n    __abstract__ = True\n    id: Mapped[int] = mapped_column(primary_key=True)\n    @declared_attr.directive\n    def __tablename__(cls) -> str:\n        return f\"{cls.__name__.lower()}s\"",
+        "detail": "src.db.models._base",
+        "documentation": {}
+    },
+    {
+        "label": "Db_Settings",
+        "kind": 6,
+        "importPath": "src.db.db_config",
+        "description": "src.db.db_config",
+        "peekOfCode": "class Db_Settings(BaseSettings):\n    DB_HOST: str\n    DB_PORT: int\n    DB_NAME: str\n    DB_PASS: str\n    DB_USER: str\n    DB_NAME_TEST: str\n    @property\n    def postgres_db_url(self):\n        return f\"postgresql+asyncpg://{self.DB_USER}:{self.DB_PASS}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}\"",
+        "detail": "src.db.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "SRC_DIR",
+        "kind": 5,
+        "importPath": "src.db.db_config",
+        "description": "src.db.db_config",
+        "peekOfCode": "SRC_DIR = Path(__file__).parent.parent.parent\nclass Db_Settings(BaseSettings):\n    DB_HOST: str\n    DB_PORT: int\n    DB_NAME: str\n    DB_PASS: str\n    DB_USER: str\n    DB_NAME_TEST: str\n    @property\n    def postgres_db_url(self):",
+        "detail": "src.db.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "db_settings",
+        "kind": 5,
+        "importPath": "src.db.db_config",
+        "description": "src.db.db_config",
+        "peekOfCode": "db_settings = Db_Settings()",
+        "detail": "src.db.db_config",
+        "documentation": {}
+    },
+    {
+        "label": "DB_Helper",
+        "kind": 6,
+        "importPath": "src.db.db_helper",
+        "description": "src.db.db_helper",
+        "peekOfCode": "class DB_Helper:\n    def __init__(\n        self,\n        url: str,\n        echo: bool,\n        pool_size: int,\n    ) -> None:\n        self.engine = create_async_engine(\n            url=url,\n            echo=echo,",
+        "detail": "src.db.db_helper",
+        "documentation": {}
+    },
+    {
+        "label": "db_helper",
+        "kind": 5,
+        "importPath": "src.db.db_helper",
+        "description": "src.db.db_helper",
+        "peekOfCode": "db_helper = DB_Helper(\n    url=db_settings.postgres_db_url,\n    echo=True,\n    pool_size=50,\n)",
+        "detail": "src.db.db_helper",
+        "documentation": {}
+    },
+    {
+        "label": "JWT_Settings",
+        "kind": 6,
+        "importPath": "src.app_config",
+        "description": "src.app_config",
+        "peekOfCode": "class JWT_Settings(BaseSettings):\n    private_key_path: Path = KEYS_DIR / \"jwt-private.pem\"\n    public_key_path: Path = KEYS_DIR / \"jwt-public.pem\"\n    algorithm: str = \"RS256\"\n    access_token_expire_minutes: int = 1  # 1 minute\n    cookie_alias: str = \"JWT-ACCESS-TOKEN\"\nclass RunConfig(BaseModel):\n    host: str = \"localhost\"\n    port: int = 8000\nclass ApiPrefixes(BaseModel):",
+        "detail": "src.app_config",
+        "documentation": {}
+    },
+    {
+        "label": "RunConfig",
+        "kind": 6,
+        "importPath": "src.app_config",
+        "description": "src.app_config",
+        "peekOfCode": "class RunConfig(BaseModel):\n    host: str = \"localhost\"\n    port: int = 8000\nclass ApiPrefixes(BaseModel):\n    v1_prefix: str = \"/v1\"\n    users_prefx: str = \"/users\"\nclass App_Settings(BaseSettings):\n    run_config: RunConfig = RunConfig()\n    api_prefix: ApiPrefixes = ApiPrefixes()\n    jwt_settings: JWT_Settings = JWT_Settings()",
+        "detail": "src.app_config",
+        "documentation": {}
+    },
+    {
+        "label": "ApiPrefixes",
+        "kind": 6,
+        "importPath": "src.app_config",
+        "description": "src.app_config",
+        "peekOfCode": "class ApiPrefixes(BaseModel):\n    v1_prefix: str = \"/v1\"\n    users_prefx: str = \"/users\"\nclass App_Settings(BaseSettings):\n    run_config: RunConfig = RunConfig()\n    api_prefix: ApiPrefixes = ApiPrefixes()\n    jwt_settings: JWT_Settings = JWT_Settings()\napp_settings = App_Settings()",
+        "detail": "src.app_config",
+        "documentation": {}
+    },
+    {
+        "label": "App_Settings",
+        "kind": 6,
+        "importPath": "src.app_config",
+        "description": "src.app_config",
+        "peekOfCode": "class App_Settings(BaseSettings):\n    run_config: RunConfig = RunConfig()\n    api_prefix: ApiPrefixes = ApiPrefixes()\n    jwt_settings: JWT_Settings = JWT_Settings()\napp_settings = App_Settings()",
+        "detail": "src.app_config",
+        "documentation": {}
+    },
+    {
+        "label": "KEYS_DIR",
+        "kind": 5,
+        "importPath": "src.app_config",
+        "description": "src.app_config",
+        "peekOfCode": "KEYS_DIR = Path(__file__).parent / \"auth\" / \"jwt_keys\"\nclass JWT_Settings(BaseSettings):\n    private_key_path: Path = KEYS_DIR / \"jwt-private.pem\"\n    public_key_path: Path = KEYS_DIR / \"jwt-public.pem\"\n    algorithm: str = \"RS256\"\n    access_token_expire_minutes: int = 1  # 1 minute\n    cookie_alias: str = \"JWT-ACCESS-TOKEN\"\nclass RunConfig(BaseModel):\n    host: str = \"localhost\"\n    port: int = 8000",
+        "detail": "src.app_config",
+        "documentation": {}
+    },
+    {
+        "label": "app_settings",
+        "kind": 5,
+        "importPath": "src.app_config",
+        "description": "src.app_config",
+        "peekOfCode": "app_settings = App_Settings()",
+        "detail": "src.app_config",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "app = FastAPI(title=\"Welcome to City!\")\napp.include_router(auth_router, tags=[\"Authorization and register\"])\napp.include_router(v1_router)\nif __name__ == \"__main__\":\n    uvicorn.run(\n        app=\"main:app\",\n        port=app_settings.run_config.port,\n        host=app_settings.run_config.host,\n        reload=True,\n    )",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "user_data",
+        "kind": 2,
+        "importPath": "tests.tests_auth.conftest",
+        "description": "tests.tests_auth.conftest",
+        "peekOfCode": "def user_data():\n    user = {\n        \"username\": \"awsx\",\n        \"password\": \"awsx5\",\n    }\n    return user\n@pytest.fixture\nasync def create_user_fixture():\n    async with session_factory_test() as session:\n        stmt = insert(User).values(",
+        "detail": "tests.tests_auth.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "DB_URL_TEST",
+        "kind": 5,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "DB_URL_TEST = db_settings.postgres_db_url_test\nengine_test = create_async_engine(\n    url=DB_URL_TEST,\n    poolclass=NullPool,\n    echo=True,\n)\nsession_factory_test = async_sessionmaker(bind=engine_test)\nprint(DB_URL_TEST)\n# session dependency\nasync def override_session_dep():",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "engine_test",
+        "kind": 5,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "engine_test = create_async_engine(\n    url=DB_URL_TEST,\n    poolclass=NullPool,\n    echo=True,\n)\nsession_factory_test = async_sessionmaker(bind=engine_test)\nprint(DB_URL_TEST)\n# session dependency\nasync def override_session_dep():\n    async with session_factory_test() as session:",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "session_factory_test",
+        "kind": 5,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "session_factory_test = async_sessionmaker(bind=engine_test)\nprint(DB_URL_TEST)\n# session dependency\nasync def override_session_dep():\n    async with session_factory_test() as session:\n        yield session\n        await session.close()\napp.dependency_overrides[session_dependency] = override_session_dep\n@pytest.fixture(scope=\"session\", autouse=True)\nasync def create_tables():",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "app.dependency_overrides[session_dependency]",
+        "kind": 5,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "app.dependency_overrides[session_dependency] = override_session_dep\n@pytest.fixture(scope=\"session\", autouse=True)\nasync def create_tables():\n    async with engine_test.begin() as conn:\n        await conn.run_sync(Base.metadata.drop_all)\n        await conn.run_sync(Base.metadata.create_all)\n    yield\n    # async with engine_test.begin() as conn:\n    # await conn.run_sync(Base.metadata.drop_all)\n@pytest.fixture(scope=\"session\")",
+        "detail": "tests.conftest",
+        "documentation": {}
+    }
+]

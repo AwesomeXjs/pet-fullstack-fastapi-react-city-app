@@ -1,0 +1,9 @@
+@import '../../../scss/variables';
+
+.nav_main_style {
+	display: flex;
+	min-width: 100%;
+	justify-content: space-between;
+	color: white;
+	background-color: $background-color;
+}

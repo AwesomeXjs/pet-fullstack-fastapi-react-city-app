@@ -8,15 +8,13 @@ from auth.api.schemas import UserCreateSchema
 
 
 # создаем jwt и кладем его в куки
-def create_jwt_and_set_cookie(
+async def create_jwt_and_set_cookie(
     response: Response,
     username: str,
-    email: str,
 ):
     access_token = jwt_service.create_jwt(
         token_data={
             "username": username,
-            "email": email,
         },
         expire_minutes=app_settings.jwt_settings.access_token_expire_minutes,
     )
@@ -27,8 +25,8 @@ def create_jwt_and_set_cookie(
 async def delete_cookie(payload: dict, response: Response):
     username = payload.get("username")
     if username is None:
+        response.delete_cookie(jwt_service.COOKIE_ALIAS)
         raise unauth_401_exc(detail=f"Ваша сессия уже истекла!")
-
     response.delete_cookie(jwt_service.COOKIE_ALIAS)
     return {
         "Status": "OK",

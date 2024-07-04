@@ -39,16 +39,16 @@ async def login_user_by_username_and_password(
         hashed_password=user.hashed_password,
     ):
         raise unauth_401_exc(detail=f"Вы не правильно ввели пароль!")
-    return UserCreateSchema(email=user.email, username=user.username)
+    return UserCreateSchema(username=user.username)
 
 
 # проверяет куки на юзернейм, если он там есть - возвращает True, либо выдает ошибку
 async def auth_by_jwt_payload(
     payload: Annotated[dict, Depends(get_payload_from_jwt_cookie)],
-) -> bool:
+) -> str:
     username = payload.get("username")
     if username is not None:
-        return True
+        return username
 
     raise not_accept_406_exc(
         f"Мы не смогли верифицировать вас, пожалуйста, зайдите в систему заного!"
