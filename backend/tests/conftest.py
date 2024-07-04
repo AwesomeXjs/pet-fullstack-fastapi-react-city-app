@@ -21,6 +21,7 @@ session_factory_test = async_sessionmaker(bind=engine_test)
 print(DB_URL_TEST)
 
 
+# session dependency
 async def override_session_dep():
     async with session_factory_test() as session:
         yield session
