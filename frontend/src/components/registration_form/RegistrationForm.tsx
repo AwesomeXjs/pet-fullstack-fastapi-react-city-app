@@ -1,10 +1,4 @@
-import React, {
-	ChangeEventHandler,
-	FC,
-	Dispatch,
-	SetStateAction,
-	useState,
-} from 'react'
+import React, { FC, Dispatch, SetStateAction, useState } from 'react'
 import AppBar from '@material-ui/core/AppBar'
 import Tabs from '@material-ui/core/Tabs'
 import Tab from '@material-ui/core/Tab'
@@ -95,10 +89,10 @@ const RegistrtionForm: FC<RegisterProps> = ({ setOpen, setAuth }) => {
 
 	const registerAndLoginHandler = () => {
 		if (label == 'Регистрация') {
-			universalUrlRegisterAndLogin('http://localhost:8000/auth/register')
+			universalUrlRegisterAndLogin('/auth/register')
 			return
 		} else {
-			universalUrlRegisterAndLogin('http://localhost:8000/auth/login')
+			universalUrlRegisterAndLogin('/auth/login')
 		}
 	}
 

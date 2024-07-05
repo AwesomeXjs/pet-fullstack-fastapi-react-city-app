@@ -797,6 +797,14 @@
         "documentation": {}
     },
     {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
         "label": "pytest",
         "kind": 6,
         "isExtraImport": true,
@@ -1072,15 +1080,6 @@
         "documentation": {}
     },
     {
-        "label": "create_jwt_and_set_cookie",
-        "kind": 2,
-        "importPath": "src.auth.api.utils",
-        "description": "src.auth.api.utils",
-        "peekOfCode": "def create_jwt_and_set_cookie(\n    response: Response,\n    username: str,\n):\n    access_token = jwt_service.create_jwt(\n        token_data={\n            \"username\": username,\n        },\n        expire_minutes=app_settings.jwt_settings.access_token_expire_minutes,\n    )",
-        "detail": "src.auth.api.utils",
-        "documentation": {}
-    },
-    {
         "label": "validate_user_by_username",
         "kind": 2,
         "importPath": "src.auth.api.utils",
@@ -1257,6 +1256,15 @@
         "importPath": "src.main",
         "description": "src.main",
         "peekOfCode": "app = FastAPI(title=\"Welcome to City!\")\napp.include_router(auth_router, tags=[\"Authorization and register\"])\napp.include_router(v1_router)\nif __name__ == \"__main__\":\n    uvicorn.run(\n        app=\"main:app\",\n        port=app_settings.run_config.port,\n        host=app_settings.run_config.host,\n        reload=True,\n    )",
+        "detail": "src.main",
+        "documentation": {}
+    },
+    {
+        "label": "origins",
+        "kind": 5,
+        "importPath": "src.main",
+        "description": "src.main",
+        "peekOfCode": "origins = [\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",\n    \"https://aweso0mex.github.io/tech-magazine\",\n    \"http://localhost:5173\",\n]\napp.add_middleware(\n    CORSMiddleware,",
         "detail": "src.main",
         "documentation": {}
     },

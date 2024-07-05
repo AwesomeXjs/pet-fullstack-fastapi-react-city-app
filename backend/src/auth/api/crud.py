@@ -30,13 +30,17 @@ async def create_user(
             response=response,
             username=data.username,
         )
+        await create_jwt_and_set_cookie(
+            response=response,
+            username=data.username,
+        )
         await session.commit()
         return UserCreateSchema(
             username=data.username,
         )
     except IntegrityError as e:
         raise not_accept_406_exc(f"Пользователь {data.username} уже существует!")
-    except Exception:
+    except Exception as e:
         raise something_wrong_400_exc(f"Что то пошло не так! Детали: {e}")
 
 

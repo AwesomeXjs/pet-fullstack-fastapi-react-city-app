@@ -1,4 +1,4 @@
-import React, { Dispatch, FC, SetStateAction, useState } from 'react'
+import React, { Dispatch, FC, SetStateAction } from 'react'
 import BottomNavigation from '@material-ui/core/BottomNavigation'
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
 import ExitToAppIcon from '@material-ui/icons/ExitToApp'
@@ -16,11 +16,11 @@ interface NavProps {
 }
 
 const LabelBottomNavigation: FC<NavProps> = ({ handleOpen, auth, setAuth }) => {
-	const [payload, setPayload] = useState()
+	// const [payload, setPayload] = useState()
 
 	const getPayload = () => {
 		axios
-			.get('http://localhost:8000/auth/payload')
+			.get('/auth/payload')
 			.then(function (response) {
 				console.log(response.data)
 			})
@@ -32,7 +32,7 @@ const LabelBottomNavigation: FC<NavProps> = ({ handleOpen, auth, setAuth }) => {
 
 	const logoutUs = () => {
 		axios
-			.post('http://localhost:8000/auth/logout', { withCredentials: true })
+			.post('/auth/logout', { withCredentials: true })
 			.then(function (response) {
 				console.log(response)
 				setAuth(false)
