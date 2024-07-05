@@ -18,7 +18,7 @@ COPY . .
 
 RUN openssl genrsa -out src/auth/jwt_keys/jwt-private.pem 2048
 
-RUN openssl rsa -in /src/auth/jwt_keys/jwt-private.pem -outform PEM -pubout -out /src/auth/jwt_keys/jwt-public.pem
+RUN openssl rsa -in src/auth/jwt_keys/jwt-private.pem -outform PEM -pubout -out /src/auth/jwt_keys/jwt-public.pem
 
 RUN alembic upgrade head
 
