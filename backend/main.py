@@ -12,6 +12,7 @@ app.include_router(v1_router)
 
 
 origins = [
+    "https://awesomexjs.github.io",
     "https://awesomexjs.github.io/pet-fullstack-fastapi-react-city-app"
     "http://localhost.tiangolo.com",
     "https://localhost.tiangolo.com",

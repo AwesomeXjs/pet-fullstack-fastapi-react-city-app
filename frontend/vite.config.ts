@@ -8,7 +8,7 @@ export default defineConfig({
 		port: 8080,
 		proxy: {
 			'/auth': {
-				target: 'http://127.0.0.1:9999',
+				target: 'https://pet-fullstack-fastapi-react-city-app-1.onrender.com/',
 				changeOrigin: true,
 				rewrite: path => path.replace(/^\/api/, '/api'),
 			},
