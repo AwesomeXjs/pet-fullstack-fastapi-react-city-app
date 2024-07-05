@@ -1318,7 +1318,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "origins = [\n    \"https://awesomexjs.github.io\",\n    \"https://awesomexjs.github.io/pet-fullstack-fastapi-react-city-app\"\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",\n    \"http://localhost:10000/\",\n    \"http://localhost:8080\",\n    \"https://aweso0mex.github.io/tech-magazine\",",
+        "peekOfCode": "origins = [\n    \"https://awesomexjs.github.io\",\n    \"https://awesomexjs.github.io/pet-fullstack-fastapi-react-city-app\"\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",\n    \"http://localhost:10000\",\n    \"http://localhost:8080\",\n    \"https://aweso0mex.github.io/tech-magazine\",",
         "detail": "main",
         "documentation": {}
     }
