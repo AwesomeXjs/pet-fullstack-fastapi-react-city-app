@@ -16,8 +16,8 @@ RUN poetry install
 
 COPY . .
 
-WORKDIR /src
-
 RUN alembic upgrade head
+
+WORKDIR /src
 
 CMD uvicorn main:app --host 0.0.0.0 --port 8000
