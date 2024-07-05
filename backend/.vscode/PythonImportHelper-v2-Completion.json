@@ -266,7 +266,31 @@
         "documentation": {}
     },
     {
+        "label": "db_helper",
+        "importPath": "src.db",
+        "description": "src.db",
+        "isExtraImport": true,
+        "detail": "src.db",
+        "documentation": {}
+    },
+    {
         "label": "Base",
+        "importPath": "src.db.models",
+        "description": "src.db.models",
+        "isExtraImport": true,
+        "detail": "src.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "src.db.models",
+        "description": "src.db.models",
+        "isExtraImport": true,
+        "detail": "src.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
         "importPath": "src.db.models",
         "description": "src.db.models",
         "isExtraImport": true,
@@ -386,83 +410,43 @@
         "documentation": {}
     },
     {
-        "label": "User",
-        "importPath": "db.models",
-        "description": "db.models",
+        "label": "auth_service",
+        "importPath": "src.auth.auth_service",
+        "description": "src.auth.auth_service",
         "isExtraImport": true,
-        "detail": "db.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "db.models",
-        "description": "db.models",
-        "isExtraImport": true,
-        "detail": "db.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "db.models",
-        "description": "db.models",
-        "isExtraImport": true,
-        "detail": "db.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "db.models",
-        "description": "db.models",
-        "isExtraImport": true,
-        "detail": "db.models",
-        "documentation": {}
-    },
-    {
-        "label": "Base",
-        "importPath": "db.models",
-        "description": "db.models",
-        "isExtraImport": true,
-        "detail": "db.models",
+        "detail": "src.auth.auth_service",
         "documentation": {}
     },
     {
         "label": "auth_service",
-        "importPath": "auth.auth_service",
-        "description": "auth.auth_service",
+        "importPath": "src.auth.auth_service",
+        "description": "src.auth.auth_service",
         "isExtraImport": true,
-        "detail": "auth.auth_service",
-        "documentation": {}
-    },
-    {
-        "label": "auth_service",
-        "importPath": "auth.auth_service",
-        "description": "auth.auth_service",
-        "isExtraImport": true,
-        "detail": "auth.auth_service",
+        "detail": "src.auth.auth_service",
         "documentation": {}
     },
     {
         "label": "unauth_401_exc",
-        "importPath": "auth.api.exceptions",
-        "description": "auth.api.exceptions",
+        "importPath": "src.auth.api.exceptions",
+        "description": "src.auth.api.exceptions",
         "isExtraImport": true,
-        "detail": "auth.api.exceptions",
+        "detail": "src.auth.api.exceptions",
         "documentation": {}
     },
     {
         "label": "unauth_401_exc",
-        "importPath": "auth.api.exceptions",
-        "description": "auth.api.exceptions",
+        "importPath": "src.auth.api.exceptions",
+        "description": "src.auth.api.exceptions",
         "isExtraImport": true,
-        "detail": "auth.api.exceptions",
+        "detail": "src.auth.api.exceptions",
         "documentation": {}
     },
     {
         "label": "not_accept_406_exc",
-        "importPath": "auth.api.exceptions",
-        "description": "auth.api.exceptions",
+        "importPath": "src.auth.api.exceptions",
+        "description": "src.auth.api.exceptions",
         "isExtraImport": true,
-        "detail": "auth.api.exceptions",
+        "detail": "src.auth.api.exceptions",
         "documentation": {}
     },
     {
@@ -499,122 +483,106 @@
     },
     {
         "label": "User",
-        "importPath": "db.models.user",
-        "description": "db.models.user",
+        "importPath": "src.db.models.user",
+        "description": "src.db.models.user",
         "isExtraImport": true,
-        "detail": "db.models.user",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "db.models.user",
-        "description": "db.models.user",
-        "isExtraImport": true,
-        "detail": "db.models.user",
+        "detail": "src.db.models.user",
         "documentation": {}
     },
     {
         "label": "app_settings",
-        "importPath": "app_config",
-        "description": "app_config",
+        "importPath": "src.app_config",
+        "description": "src.app_config",
         "isExtraImport": true,
-        "detail": "app_config",
+        "detail": "src.app_config",
         "documentation": {}
     },
     {
         "label": "app_settings",
-        "importPath": "app_config",
-        "description": "app_config",
+        "importPath": "src.app_config",
+        "description": "src.app_config",
         "isExtraImport": true,
-        "detail": "app_config",
+        "detail": "src.app_config",
         "documentation": {}
     },
     {
         "label": "app_settings",
-        "importPath": "app_config",
-        "description": "app_config",
+        "importPath": "src.app_config",
+        "description": "src.app_config",
         "isExtraImport": true,
-        "detail": "app_config",
+        "detail": "src.app_config",
         "documentation": {}
     },
     {
         "label": "jwt_service",
-        "importPath": "auth.jwt_service",
-        "description": "auth.jwt_service",
+        "importPath": "src.auth.jwt_service",
+        "description": "src.auth.jwt_service",
         "isExtraImport": true,
-        "detail": "auth.jwt_service",
+        "detail": "src.auth.jwt_service",
         "documentation": {}
     },
     {
         "label": "jwt_service",
-        "importPath": "auth.jwt_service",
-        "description": "auth.jwt_service",
+        "importPath": "src.auth.jwt_service",
+        "description": "src.auth.jwt_service",
         "isExtraImport": true,
-        "detail": "auth.jwt_service",
+        "detail": "src.auth.jwt_service",
         "documentation": {}
     },
     {
         "label": "UserCreateSchema",
-        "importPath": "auth.api.schemas",
-        "description": "auth.api.schemas",
+        "importPath": "src.auth.api.schemas",
+        "description": "src.auth.api.schemas",
         "isExtraImport": true,
-        "detail": "auth.api.schemas",
+        "detail": "src.auth.api.schemas",
         "documentation": {}
     },
     {
         "label": "UserCreateSchema",
-        "importPath": "auth.api.schemas",
-        "description": "auth.api.schemas",
+        "importPath": "src.auth.api.schemas",
+        "description": "src.auth.api.schemas",
         "isExtraImport": true,
-        "detail": "auth.api.schemas",
+        "detail": "src.auth.api.schemas",
         "documentation": {}
     },
     {
         "label": "UserLoginSchema",
-        "importPath": "auth.api.schemas",
-        "description": "auth.api.schemas",
+        "importPath": "src.auth.api.schemas",
+        "description": "src.auth.api.schemas",
         "isExtraImport": true,
-        "detail": "auth.api.schemas",
+        "detail": "src.auth.api.schemas",
         "documentation": {}
     },
     {
         "label": "session_dependency",
-        "importPath": "dependencies.session_dep",
-        "description": "dependencies.session_dep",
+        "importPath": "src.dependencies.session_dep",
+        "description": "src.dependencies.session_dep",
         "isExtraImport": true,
-        "detail": "dependencies.session_dep",
-        "documentation": {}
-    },
-    {
-        "label": "session_dependency",
-        "importPath": "dependencies.session_dep",
-        "description": "dependencies.session_dep",
-        "isExtraImport": true,
-        "detail": "dependencies.session_dep",
+        "detail": "src.dependencies.session_dep",
         "documentation": {}
     },
     {
         "label": "auth_by_jwt_payload",
-        "importPath": "dependencies.auth_dep",
-        "description": "dependencies.auth_dep",
+        "importPath": "src.dependencies.auth_dep",
+        "description": "src.dependencies.auth_dep",
         "isExtraImport": true,
-        "detail": "dependencies.auth_dep",
+        "detail": "src.dependencies.auth_dep",
         "documentation": {}
     },
     {
         "label": "get_payload_from_jwt_cookie",
-        "importPath": "dependencies.auth_dep",
-        "description": "dependencies.auth_dep",
+        "importPath": "src.dependencies.auth_dep",
+        "description": "src.dependencies.auth_dep",
         "isExtraImport": true,
-        "detail": "dependencies.auth_dep",
+        "detail": "src.dependencies.auth_dep",
         "documentation": {}
     },
     {
         "label": "login_user_by_username_and_password",
-        "importPath": "dependencies.auth_dep",
-        "description": "dependencies.auth_dep",
+        "importPath": "src.dependencies.auth_dep",
+        "description": "src.dependencies.auth_dep",
         "isExtraImport": true,
-        "detail": "dependencies.auth_dep",
+        "detail": "src.dependencies.auth_dep",
         "documentation": {}
     },
     {
@@ -756,55 +724,6 @@
         "documentation": {}
     },
     {
-        "label": "db_helper",
-        "importPath": "db",
-        "description": "db",
-        "isExtraImport": true,
-        "detail": "db",
-        "documentation": {}
-    },
-    {
-        "label": "db_settings",
-        "importPath": "db",
-        "description": "db",
-        "isExtraImport": true,
-        "detail": "db",
-        "documentation": {}
-    },
-    {
-        "label": "uvicorn",
-        "kind": 6,
-        "isExtraImport": true,
-        "importPath": "uvicorn",
-        "description": "uvicorn",
-        "detail": "uvicorn",
-        "documentation": {}
-    },
-    {
-        "label": "router",
-        "importPath": "api",
-        "description": "api",
-        "isExtraImport": true,
-        "detail": "api",
-        "documentation": {}
-    },
-    {
-        "label": "router",
-        "importPath": "auth.api.view",
-        "description": "auth.api.view",
-        "isExtraImport": true,
-        "detail": "auth.api.view",
-        "documentation": {}
-    },
-    {
-        "label": "CORSMiddleware",
-        "importPath": "fastapi.middleware.cors",
-        "description": "fastapi.middleware.cors",
-        "isExtraImport": true,
-        "detail": "fastapi.middleware.cors",
-        "documentation": {}
-    },
-    {
         "label": "pytest",
         "kind": 6,
         "isExtraImport": true,
@@ -886,6 +805,14 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "db.models.user",
+        "description": "db.models.user",
+        "isExtraImport": true,
+        "detail": "db.models.user",
+        "documentation": {}
+    },
+    {
         "label": "session_factory_test",
         "importPath": "tests.conftest",
         "description": "tests.conftest",
@@ -910,11 +837,75 @@
         "documentation": {}
     },
     {
+        "label": "User",
+        "importPath": "db.models",
+        "description": "db.models",
+        "isExtraImport": true,
+        "detail": "db.models",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "db.models",
+        "description": "db.models",
+        "isExtraImport": true,
+        "detail": "db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "db.models",
+        "description": "db.models",
+        "isExtraImport": true,
+        "detail": "db.models",
+        "documentation": {}
+    },
+    {
         "label": "app",
         "importPath": "main",
         "description": "main",
         "isExtraImport": true,
         "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "db_settings",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "session_dependency",
+        "importPath": "dependencies.session_dep",
+        "description": "dependencies.session_dep",
+        "isExtraImport": true,
+        "detail": "dependencies.session_dep",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "src.api",
+        "description": "src.api",
+        "isExtraImport": true,
+        "detail": "src.api",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "importPath": "src.auth.api.view",
+        "description": "src.auth.api.view",
+        "isExtraImport": true,
+        "detail": "src.auth.api.view",
         "documentation": {}
     },
     {
@@ -1260,24 +1251,6 @@
         "documentation": {}
     },
     {
-        "label": "app",
-        "kind": 5,
-        "importPath": "src.main",
-        "description": "src.main",
-        "peekOfCode": "app = FastAPI(title=\"Welcome to City!\")\napp.include_router(auth_router, tags=[\"Authorization and register\"])\napp.include_router(v1_router)\norigins = [\n    \"https://awesomexjs.github.io/pet-fullstack-fastapi-react-city-app\"\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",\n    \"https://aweso0mex.github.io/tech-magazine\",",
-        "detail": "src.main",
-        "documentation": {}
-    },
-    {
-        "label": "origins",
-        "kind": 5,
-        "importPath": "src.main",
-        "description": "src.main",
-        "peekOfCode": "origins = [\n    \"https://awesomexjs.github.io/pet-fullstack-fastapi-react-city-app\"\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",\n    \"https://aweso0mex.github.io/tech-magazine\",\n    \"http://localhost:5173\",\n]\napp.add_middleware(",
-        "detail": "src.main",
-        "documentation": {}
-    },
-    {
         "label": "user_data",
         "kind": 2,
         "importPath": "tests.tests_auth.conftest",
@@ -1320,6 +1293,24 @@
         "description": "tests.conftest",
         "peekOfCode": "app.dependency_overrides[session_dependency] = override_session_dep\n@pytest.fixture(scope=\"session\", autouse=True)\nasync def create_tables():\n    async with engine_test.begin() as conn:\n        await conn.run_sync(Base.metadata.drop_all)\n        await conn.run_sync(Base.metadata.create_all)\n    yield\n    # async with engine_test.begin() as conn:\n    # await conn.run_sync(Base.metadata.drop_all)\n@pytest.fixture(scope=\"session\")",
         "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "app = FastAPI(title=\"Welcome to City!\")\napp.include_router(auth_router, tags=[\"Authorization and register\"])\napp.include_router(v1_router)\norigins = [\n    \"https://awesomexjs.github.io/pet-fullstack-fastapi-react-city-app\"\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",\n    \"https://aweso0mex.github.io/tech-magazine\",",
+        "detail": "main",
+        "documentation": {}
+    },
+    {
+        "label": "origins",
+        "kind": 5,
+        "importPath": "main",
+        "description": "main",
+        "peekOfCode": "origins = [\n    \"https://awesomexjs.github.io/pet-fullstack-fastapi-react-city-app\"\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",\n    \"https://aweso0mex.github.io/tech-magazine\",\n    \"http://localhost:5173\",\n]\napp.add_middleware(",
+        "detail": "main",
         "documentation": {}
     }
 ]
