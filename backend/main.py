@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from fastapi.middleware.cors import CORSMiddlewarefrom fastapi.middleware.cors import CORSMiddleware
+from fastapi.middleware.cors import CORSMiddleware
 
 from src.api import router as v1_router
 from src.app_config import app_settings
@@ -17,7 +17,8 @@ origins = [
     "http://localhost.tiangolo.com",
     "https://localhost.tiangolo.com",
     "http://localhost",
-    "http://localhost:10000/", "http://localhost:8000",
+    "http://localhost:8000",
+    "http://localhost:10000/",
     "http://localhost:8080",
     "https://aweso0mex.github.io/tech-magazine",
     "http://localhost:5173",
