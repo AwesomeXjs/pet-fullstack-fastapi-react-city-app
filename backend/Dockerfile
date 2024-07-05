@@ -19,3 +19,9 @@ COPY . .
 RUN alembic upgrade head
 
 CMD gunicorn main:app --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind=0.0.0.0:8000
+
+WORKDIR /src/auth/jwt_keys
+
+RUN openssl genrsa -out jwt-private.pem 2048
+
+RUN openssl rsa -in jwt-private.pem -outform PEM -pubout -out jwt-public.pem
