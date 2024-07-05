@@ -18,6 +18,7 @@ origins = [
     "https://localhost.tiangolo.com",
     "http://localhost",
     "http://localhost:8000",
+    "http://localhost:8080",
     "https://aweso0mex.github.io/tech-magazine",
     "http://localhost:5173",
 ]

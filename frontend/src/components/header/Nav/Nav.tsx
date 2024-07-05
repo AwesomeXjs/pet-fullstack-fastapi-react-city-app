@@ -35,7 +35,10 @@ const LabelBottomNavigation: FC<NavProps> = ({ handleOpen, auth, setAuth }) => {
 
 	const logoutUs = () => {
 		axios
-			.post('/auth/logout', { withCredentials: true })
+			.post(
+				'https://pet-fullstack-fastapi-react-city-app-1.onrender.com/auth/logout',
+				{ withCredentials: true }
+			)
 			.then(function (response) {
 				toast.success(response.data.data)
 				setAuth(false)
