@@ -13,14 +13,6 @@ app.include_router(auth_router, tags=["Authorization and register"])
 app.include_router(v1_router)
 
 
-if __name__ == "__main__":
-    uvicorn.run(
-        app="main:app",
-        port=app_settings.run_config.port,
-        host=app_settings.run_config.host,
-        reload=True,
-    )
-
 origins = [
     "https://awesomexjs.github.io/pet-fullstack-fastapi-react-city-app"
     "http://localhost.tiangolo.com",

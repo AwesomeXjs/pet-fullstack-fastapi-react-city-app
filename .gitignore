@@ -32,3 +32,4 @@ dist-ssr
 *.sw?
 dist
 .env
+.env-non-dev
