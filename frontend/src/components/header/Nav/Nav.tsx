@@ -43,8 +43,7 @@ const LabelBottomNavigation: FC<NavProps> = ({ handleOpen, auth, setAuth }) => {
 				toast.success(response.data.data)
 				setAuth(false)
 			})
-			.catch(function (response) {
-				toast.success(response.data.data)
+			.catch(function () {
 				setAuth(false)
 			})
 	}
