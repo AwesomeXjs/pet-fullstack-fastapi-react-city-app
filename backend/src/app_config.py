@@ -7,8 +7,10 @@ KEYS_DIR = Path(__file__).parent / "auth" / "jwt_keys"
 
 
 class JWT_Settings(BaseSettings):
-    private_key_path: Path = KEYS_DIR / "jwt-private.pem"
-    public_key_path: Path = KEYS_DIR / "jwt-public.pem"
+    # private_key_path: Path = KEYS_DIR / "jwt-private.pem"
+    private_key_path: Path = "jwt-private.pem"
+    #public_key_path: Path = KEYS_DIR / "jwt-public.pem"
+    public_key_path: Path =  "jwt-public.pem"
     algorithm: str = "RS256"
     access_token_expire_minutes: int = 1440  # 1 day
     cookie_alias: str = "JWT-ACCESS-TOKEN"

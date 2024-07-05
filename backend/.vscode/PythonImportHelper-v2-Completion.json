@@ -1201,7 +1201,7 @@
         "kind": 6,
         "importPath": "src.app_config",
         "description": "src.app_config",
-        "peekOfCode": "class JWT_Settings(BaseSettings):\n    private_key_path: Path = KEYS_DIR / \"jwt-private.pem\"\n    public_key_path: Path = KEYS_DIR / \"jwt-public.pem\"\n    algorithm: str = \"RS256\"\n    access_token_expire_minutes: int = 1440  # 1 day\n    cookie_alias: str = \"JWT-ACCESS-TOKEN\"\nclass RunConfig(BaseModel):\n    host: str = \"localhost\"\n    port: int = 8000\nclass ApiPrefixes(BaseModel):",
+        "peekOfCode": "class JWT_Settings(BaseSettings):\n    # private_key_path: Path = KEYS_DIR / \"jwt-private.pem\"\n    private_key_path: Path = \"jwt-private.pem\"\n    #public_key_path: Path = KEYS_DIR / \"jwt-public.pem\"\n    public_key_path: Path =  \"jwt-public.pem\"\n    algorithm: str = \"RS256\"\n    access_token_expire_minutes: int = 1440  # 1 day\n    cookie_alias: str = \"JWT-ACCESS-TOKEN\"\nclass RunConfig(BaseModel):\n    host: str = \"localhost\"",
         "detail": "src.app_config",
         "documentation": {}
     },
@@ -1237,7 +1237,7 @@
         "kind": 5,
         "importPath": "src.app_config",
         "description": "src.app_config",
-        "peekOfCode": "KEYS_DIR = Path(__file__).parent / \"auth\" / \"jwt_keys\"\nclass JWT_Settings(BaseSettings):\n    private_key_path: Path = KEYS_DIR / \"jwt-private.pem\"\n    public_key_path: Path = KEYS_DIR / \"jwt-public.pem\"\n    algorithm: str = \"RS256\"\n    access_token_expire_minutes: int = 1440  # 1 day\n    cookie_alias: str = \"JWT-ACCESS-TOKEN\"\nclass RunConfig(BaseModel):\n    host: str = \"localhost\"\n    port: int = 8000",
+        "peekOfCode": "KEYS_DIR = Path(__file__).parent / \"auth\" / \"jwt_keys\"\nclass JWT_Settings(BaseSettings):\n    # private_key_path: Path = KEYS_DIR / \"jwt-private.pem\"\n    private_key_path: Path = \"jwt-private.pem\"\n    #public_key_path: Path = KEYS_DIR / \"jwt-public.pem\"\n    public_key_path: Path =  \"jwt-public.pem\"\n    algorithm: str = \"RS256\"\n    access_token_expire_minutes: int = 1440  # 1 day\n    cookie_alias: str = \"JWT-ACCESS-TOKEN\"\nclass RunConfig(BaseModel):",
         "detail": "src.app_config",
         "documentation": {}
     },
