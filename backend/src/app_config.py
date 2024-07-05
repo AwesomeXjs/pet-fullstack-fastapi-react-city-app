@@ -10,7 +10,7 @@ class JWT_Settings(BaseSettings):
     private_key_path: Path = KEYS_DIR / "jwt-private.pem"
     public_key_path: Path = KEYS_DIR / "jwt-public.pem"
     algorithm: str = "RS256"
-    access_token_expire_minutes: int = 1  # 1 minute
+    access_token_expire_minutes: int = 1440  # 1 day
     cookie_alias: str = "JWT-ACCESS-TOKEN"
 
 

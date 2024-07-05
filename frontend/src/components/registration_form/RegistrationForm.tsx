@@ -7,6 +7,7 @@ import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button'
 import InputForm from './input/InputForm'
 import axios from 'axios'
+import toast from 'react-hot-toast'
 
 interface TabPanelProps {
 	children?: React.ReactNode
@@ -78,12 +79,29 @@ const RegistrtionForm: FC<RegisterProps> = ({ setOpen, setAuth }) => {
 			},
 		})
 			.then(function (response) {
+				if (response.status == 202) {
+					toast.error('Пользователь с таким юзернеймом уже зарегестрирован!')
+					return
+				}
+				if (response.status == 201) {
+					toast.success(
+						`Вы успешно прошли регистрацию! ${response.data.username}, добро пожаловать!`
+					)
+					setOpen(false)
+					setAuth(true)
+					return
+				}
+				if (response.status == 200) {
+					toast.success('Вы успешно вошли в систему!', {})
+					setOpen(false)
+					setAuth(true)
+					return
+				}
 				console.log(response)
-				setOpen(false)
-				setAuth(true)
 			})
-			.catch(function (error) {
-				console.log(error)
+			.catch(function () {
+				toast.error('Что то пошло не так попробуйте позже!')
+				setOpen(false)
 			})
 	}
 

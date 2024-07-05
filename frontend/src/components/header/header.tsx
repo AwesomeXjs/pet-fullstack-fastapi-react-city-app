@@ -1,6 +1,6 @@
 import { Dispatch, FC, SetStateAction } from 'react'
 
-import LabelBottomNavigation from './Nav/Nav'
+import { LabelBottomNavigation } from './Nav/Nav'
 import styles from './header.module.scss'
 
 interface HeaderProps {

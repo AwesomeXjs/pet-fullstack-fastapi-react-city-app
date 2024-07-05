@@ -17,17 +17,19 @@ const App = () => {
 		setOpen(false)
 	}
 	return (
-		<div>
-			<Header setAuth={setAuth} auth={auth} handleOpen={handleOpen} />
-			{!auth ? <MainPage /> : <AuthPage />}
-			<TransitionsModal
-				setAuth={setAuth}
-				setOpen={setOpen}
-				open={open}
-				handleOpen={handleOpen}
-				handleClose={handleClose}
-			/>
-		</div>
+		<>
+			<div>
+				<Header setAuth={setAuth} auth={auth} handleOpen={handleOpen} />
+				{!auth ? <MainPage /> : <AuthPage />}
+				<TransitionsModal
+					setAuth={setAuth}
+					setOpen={setOpen}
+					open={open}
+					handleOpen={handleOpen}
+					handleClose={handleClose}
+				/>
+			</div>
+		</>
 	)
 }
 

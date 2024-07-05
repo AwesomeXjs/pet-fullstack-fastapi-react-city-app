@@ -22,3 +22,11 @@ def something_wrong_400_exc(detail: str):
         status_code=status.HTTP_400_BAD_REQUEST, detail=detail
     )
     return something_wrong_exc
+
+
+def user_already_find_202(detail: str):
+    accept = HTTPException(
+        status_code=status.HTTP_202_ACCEPTED,
+        detail=detail,
+    )
+    return accept

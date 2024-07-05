@@ -1021,7 +1021,16 @@
         "kind": 2,
         "importPath": "src.auth.api.exceptions",
         "description": "src.auth.api.exceptions",
-        "peekOfCode": "def something_wrong_400_exc(detail: str):\n    something_wrong_exc = HTTPException(\n        status_code=status.HTTP_400_BAD_REQUEST, detail=detail\n    )\n    return something_wrong_exc",
+        "peekOfCode": "def something_wrong_400_exc(detail: str):\n    something_wrong_exc = HTTPException(\n        status_code=status.HTTP_400_BAD_REQUEST, detail=detail\n    )\n    return something_wrong_exc\ndef user_already_find_202(detail: str):\n    accept = HTTPException(\n        status_code=status.HTTP_202_ACCEPTED,\n        detail=detail,\n    )",
+        "detail": "src.auth.api.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "user_already_find_202",
+        "kind": 2,
+        "importPath": "src.auth.api.exceptions",
+        "description": "src.auth.api.exceptions",
+        "peekOfCode": "def user_already_find_202(detail: str):\n    accept = HTTPException(\n        status_code=status.HTTP_202_ACCEPTED,\n        detail=detail,\n    )\n    return accept",
         "detail": "src.auth.api.exceptions",
         "documentation": {}
     },
@@ -1201,7 +1210,7 @@
         "kind": 6,
         "importPath": "src.app_config",
         "description": "src.app_config",
-        "peekOfCode": "class JWT_Settings(BaseSettings):\n    private_key_path: Path = KEYS_DIR / \"jwt-private.pem\"\n    public_key_path: Path = KEYS_DIR / \"jwt-public.pem\"\n    algorithm: str = \"RS256\"\n    access_token_expire_minutes: int = 1  # 1 minute\n    cookie_alias: str = \"JWT-ACCESS-TOKEN\"\nclass RunConfig(BaseModel):\n    host: str = \"localhost\"\n    port: int = 8000\nclass ApiPrefixes(BaseModel):",
+        "peekOfCode": "class JWT_Settings(BaseSettings):\n    private_key_path: Path = KEYS_DIR / \"jwt-private.pem\"\n    public_key_path: Path = KEYS_DIR / \"jwt-public.pem\"\n    algorithm: str = \"RS256\"\n    access_token_expire_minutes: int = 1440  # 1 day\n    cookie_alias: str = \"JWT-ACCESS-TOKEN\"\nclass RunConfig(BaseModel):\n    host: str = \"localhost\"\n    port: int = 8000\nclass ApiPrefixes(BaseModel):",
         "detail": "src.app_config",
         "documentation": {}
     },
@@ -1237,7 +1246,7 @@
         "kind": 5,
         "importPath": "src.app_config",
         "description": "src.app_config",
-        "peekOfCode": "KEYS_DIR = Path(__file__).parent / \"auth\" / \"jwt_keys\"\nclass JWT_Settings(BaseSettings):\n    private_key_path: Path = KEYS_DIR / \"jwt-private.pem\"\n    public_key_path: Path = KEYS_DIR / \"jwt-public.pem\"\n    algorithm: str = \"RS256\"\n    access_token_expire_minutes: int = 1  # 1 minute\n    cookie_alias: str = \"JWT-ACCESS-TOKEN\"\nclass RunConfig(BaseModel):\n    host: str = \"localhost\"\n    port: int = 8000",
+        "peekOfCode": "KEYS_DIR = Path(__file__).parent / \"auth\" / \"jwt_keys\"\nclass JWT_Settings(BaseSettings):\n    private_key_path: Path = KEYS_DIR / \"jwt-private.pem\"\n    public_key_path: Path = KEYS_DIR / \"jwt-public.pem\"\n    algorithm: str = \"RS256\"\n    access_token_expire_minutes: int = 1440  # 1 day\n    cookie_alias: str = \"JWT-ACCESS-TOKEN\"\nclass RunConfig(BaseModel):\n    host: str = \"localhost\"\n    port: int = 8000",
         "detail": "src.app_config",
         "documentation": {}
     },
@@ -1264,7 +1273,7 @@
         "kind": 5,
         "importPath": "src.main",
         "description": "src.main",
-        "peekOfCode": "origins = [\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",\n    \"https://aweso0mex.github.io/tech-magazine\",\n    \"http://localhost:5173\",\n]\napp.add_middleware(\n    CORSMiddleware,",
+        "peekOfCode": "origins = [\n    \"https://awesomexjs.github.io/pet-fullstack-fastapi-react-city-app\"\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",\n    \"https://aweso0mex.github.io/tech-magazine\",\n    \"http://localhost:5173\",\n]\napp.add_middleware(",
         "detail": "src.main",
         "documentation": {}
     },

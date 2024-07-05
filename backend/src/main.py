@@ -22,6 +22,7 @@ if __name__ == "__main__":
     )
 
 origins = [
+    "https://awesomexjs.github.io/pet-fullstack-fastapi-react-city-app"
     "http://localhost.tiangolo.com",
     "https://localhost.tiangolo.com",
     "http://localhost",

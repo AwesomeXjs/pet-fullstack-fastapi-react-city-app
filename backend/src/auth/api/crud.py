@@ -11,6 +11,7 @@ from .utils import create_jwt_and_set_cookie, delete_cookie, validate_user_by_us
 from .exceptions import (
     not_accept_406_exc,
     something_wrong_400_exc,
+    user_already_find_202,
 )
 
 
@@ -39,7 +40,7 @@ async def create_user(
             username=data.username,
         )
     except IntegrityError as e:
-        raise not_accept_406_exc(f"Пользователь {data.username} уже существует!")
+        raise user_already_find_202(f"Пользователь {data.username} уже существует!")
     except Exception as e:
         raise something_wrong_400_exc(f"Что то пошло не так! Детали: {e}")
 
