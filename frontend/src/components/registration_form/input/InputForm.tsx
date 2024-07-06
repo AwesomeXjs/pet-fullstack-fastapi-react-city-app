@@ -13,8 +13,8 @@ const useStyles = makeStyles((theme: Theme) =>
 )
 
 interface InputFormProps {
-	username: string
-	setUsername: Dispatch<SetStateAction<string>>
+	username: string | boolean
+	setUsername: Dispatch<SetStateAction<string | boolean>>
 	label: string
 }
 

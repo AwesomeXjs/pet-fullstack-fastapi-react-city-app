@@ -1,11 +1,10 @@
 from fastapi import Response
 
-from src.db.models.user import User
+from db.models.user import User
+from app_config import app_settings
 from .exceptions import unauth_401_exc
-from src.app_config import app_settings
-from src.auth.jwt_service import jwt_service
-from src.auth.api.schemas import UserCreateSchema
-
+from auth.jwt_service import jwt_service
+from auth.api.schemas import UserCreateSchema
 
 # создаем jwt и кладем его в куки
 async def create_jwt_and_set_cookie(

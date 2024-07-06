@@ -1,7 +1,7 @@
 import jwt
 from datetime import timedelta, datetime, UTC
 
-from src.app_config import app_settings
+from app_config import app_settings
 
 
 class JWT_Service:

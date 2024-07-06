@@ -1,9 +1,9 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from src.api import router as v1_router
-from src.app_config import app_settings
-from src.auth.api.view import router as auth_router
+from api import router as v1_router
+from app_config import app_settings
+from auth.api.view import router as auth_router
 
 
 app = FastAPI(title="Welcome to City!")

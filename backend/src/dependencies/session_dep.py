@@ -1,4 +1,4 @@
-from src.db import db_helper
+from db import db_helper
 
 
 async def session_dependency():

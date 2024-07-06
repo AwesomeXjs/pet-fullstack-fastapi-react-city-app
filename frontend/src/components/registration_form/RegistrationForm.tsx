@@ -51,8 +51,8 @@ const RegistrtionForm: FC<RegisterProps> = ({ setOpen, setAuth }) => {
 	const [value, setValue] = useState(0)
 	const [label, setLabel] = useState('Регистрация')
 
-	const [username, setUsername] = useState('')
-	const [password, setPassword] = useState('')
+	const [username, setUsername] = useState<string | boolean>('')
+	const [password, setPassword] = useState<string | boolean>('')
 
 	const setLabelLogin = () => {
 		setLabel('Войти')
@@ -69,6 +69,10 @@ const RegistrtionForm: FC<RegisterProps> = ({ setOpen, setAuth }) => {
 	}
 	const universalUrlRegisterAndLogin = (url: string) => {
 		const data_json = JSON.stringify({ username: username, password: password })
+		if (!password || !username) {
+			toast.error('Нужно ввести юзернейм и пароль!')
+			return
+		}
 		const my_prom = axios({
 			method: 'POST',
 			url: url,
