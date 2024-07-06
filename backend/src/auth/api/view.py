@@ -70,20 +70,23 @@ async def login_user(
 # Логаут (удаление кук)
 @router.post(
     "/logout",
-    response_model=LogoutSchema,
+    #response_model=LogoutSchema,
     status_code=status.HTTP_200_OK,
 )
 async def logout_user(
-    response: Response,
-    payload: Annotated[
-        dict,
-        Depends(get_payload_from_jwt_cookie),
-    ],
+    ## ЗАКОМЕНТИЛ СПЕЦИАЛЬНО ЧТОБЫ НА RENDER НОРМАЛЬНО РАБОТАЛ ЛОГАУТ ТАК КАК НЕ ГОНЯЮТСЯ КУКИ И ТОКЕНА ТАМ НЕТ
+    
+    # response: Response,
+    # payload: Annotated[
+    #     dict,
+    #     Depends(get_payload_from_jwt_cookie),
+    # ],
 ):
-    return await delete_cookie(
-        response=response,
-        payload=payload,
-    )
+    return True
+    # return await delete_cookie(
+    #     response=response,
+    #     payload=payload,
+    # )
 
 
 # Удаление пользователя
