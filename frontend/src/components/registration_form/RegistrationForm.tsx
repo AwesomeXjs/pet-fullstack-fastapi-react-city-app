@@ -67,10 +67,9 @@ const RegistrtionForm: FC<RegisterProps> = ({ setOpen, setAuth }) => {
 	) => {
 		setValue(newValue)
 	}
-
 	const universalUrlRegisterAndLogin = (url: string) => {
 		const data_json = JSON.stringify({ username: username, password: password })
-		axios({
+		const my_prom = axios({
 			method: 'POST',
 			url: url,
 			data: data_json,
@@ -103,6 +102,13 @@ const RegistrtionForm: FC<RegisterProps> = ({ setOpen, setAuth }) => {
 				toast.error('Что то пошло не так попробуйте позже!')
 				setOpen(false)
 			})
+
+		toast.promise(my_prom, {
+			loading: 'Ожидание...',
+
+			success: <b>Ответ получен!.</b>,
+			error: <b>Could not save.</b>,
+		})
 	}
 
 	const registerAndLoginHandler = () => {

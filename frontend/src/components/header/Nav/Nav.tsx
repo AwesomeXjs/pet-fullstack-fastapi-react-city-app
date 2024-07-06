@@ -34,17 +34,24 @@ const LabelBottomNavigation: FC<NavProps> = ({ handleOpen, auth, setAuth }) => {
 	// }
 
 	const logoutUs = () => {
-		axios
+		const my_prom = axios
 			.post(
 				'https://pet-fullstack-fastapi-react-city-app-1.onrender.com/auth/logout',
 				{ withCredentials: true }
 			)
-			.then(function (response) {
-				toast.success(response.data.data)
+			.then(function () {
+				toast.success('Досвидания!')
 				setAuth(false)
 			})
 			.catch(function () {
 				setAuth(false)
+				toast.success('Досвидания!')
+			})
+			toast.promise(my_prom, {
+				loading: 'Ожидание...',
+
+				success: <b>Ответ получен!.</b>,
+				error: <b>Could not save.</b>,
 			})
 	}
 	const [value, setValue] = React.useState('')
