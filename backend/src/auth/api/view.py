@@ -10,13 +10,13 @@ from fastapi import (
 )
 
 from . import crud
-from dependencies.session_dep import session_dependency
+from src.dependencies.session_dep import session_dependency
 from .schemas import (
     LogoutSchema,
     UserCreateSchema,
     UserRegisterSchema,
 )
-from dependencies.auth_dep import (
+from src.dependencies.auth_dep import (
     auth_by_jwt_payload,
     get_payload_from_jwt_cookie,
     login_user_by_username_and_password,

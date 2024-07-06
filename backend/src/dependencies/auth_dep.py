@@ -2,15 +2,15 @@ from typing import Annotated, Union
 
 from sqlalchemy import select
 from fastapi import Cookie, Depends, Form
+from jwt.exceptions import InvalidTokenError
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from db.models import User
-from auth.jwt_service import jwt_service
-from auth.auth_service import auth_service
+from src.db.models import User
 from .session_dep import session_dependency
-from jwt.exceptions import InvalidTokenError
-from auth.api.schemas import UserCreateSchema, UserLoginSchema
-from auth.api.exceptions import unauth_401_exc, not_accept_406_exc
+from src.auth.jwt_service import jwt_service
+from src.auth.auth_service import auth_service
+from src.auth.api.schemas import UserCreateSchema, UserLoginSchema
+from src.auth.api.exceptions import unauth_401_exc, not_accept_406_exc
 
 
 # возвращает данные из JWT токена из кук

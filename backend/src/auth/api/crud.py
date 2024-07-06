@@ -3,9 +3,9 @@ from sqlalchemy import insert, delete
 from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from db.models import User
-from auth.auth_service import auth_service
-from auth.api.exceptions import unauth_401_exc
+from src.db.models import User
+from src.auth.auth_service import auth_service
+from src.auth.api.exceptions import unauth_401_exc
 from .schemas import UserCreateSchema, UserRegisterSchema
 from .utils import create_jwt_and_set_cookie, delete_cookie, validate_user_by_username
 from .exceptions import (
