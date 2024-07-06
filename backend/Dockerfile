@@ -16,9 +16,7 @@ RUN poetry install
 
 COPY . .
 
-RUN alembic upgrade head
+RUN alembic upgrade head && cd /src
 
-WORKDIR /src
-
-CMD gunicorn src.main:app --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind=0.0.0.0:8000
+CMD gunicorn main:app --workers 1 --worker-class uvicorn.workers.UvicornWorker --bind=0.0.0.0:8000
 
