@@ -52,20 +52,24 @@ async def delete_user(
 ) -> UserCreateSchema | None:
     # if username != payload.get("username"):
     #     raise unauth_401_exc(f"Пользователь {username} не зарегистрирован")
-    try:
-        # if username == payload.get("username"):
-        stmt = delete(User).where(User.username == username)
-        await session.execute(stmt)
-        # await delete_cookie(
-        #     payload=payload,
-        #     response=response,
-        # )
-        await session.commit()
-        return UserCreateSchema(username=username)
-    # if payload.get("username") is None:
-    # raise not_accept_406_exc("Пожалуйста войдите в систему заного!")
-    except Exception as e:
-        raise something_wrong_400_exc(f"Что то пошло не так! Детали: {e}")
+    query = select(User).where(User.username == username)
+    res = await session.execute(query)
+    result = res.scalar_one_or_none()
+    if result is None:
+        raise not_accept_406_exc("Пользователь не найден")
+    # if username == payload.get("username"):
+    stmt = delete(User).where(User.username == username)
+    await session.execute(stmt)
+    # await delete_cookie(
+    #     payload=payload,
+    #     response=response,
+    # )
+    await session.commit()
+    return UserCreateSchema(username=username)
+
+
+# if payload.get("username") is None:
+# raise not_accept_406_exc("Пожалуйста войдите в систему заного!")
 
 
 async def update_password(

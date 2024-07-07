@@ -16,8 +16,8 @@ from .schemas import (
     UserRegisterSchema,
 )
 from src.dependencies.auth_dep import (
-    auth_by_jwt_payload,
-    get_payload_from_jwt_cookie,
+    # auth_by_jwt_payload,
+    # get_payload_from_jwt_cookie,
     login_user_by_username_and_password,
 )
 from src.db.models import User
@@ -36,7 +36,7 @@ async def register_user(
         AsyncSession,
         Depends(session_dependency),
     ],
-    responce: Response,
+    # responce: Response,
     data: UserRegisterSchema,
 ) -> UserCreateSchema:
     return await crud.create_user(
@@ -88,7 +88,7 @@ async def logout_user(
 
 
 # Удаление пользователя
-@router.post("/delete")
+@router.delete("/delete")
 async def delete_user(
     # response: Response,
     username: str,
@@ -121,14 +121,14 @@ async def delete_user(
 
 @router.patch("/update")
 async def update_user_password(
-    response: Response,
+    # response: Response,
     new_password: str,
     session: Annotated[AsyncSession, Depends(session_dependency)],
     user: User = Depends(login_user_by_username_and_password),
 ) -> UserCreateSchema:
 
     return await crud.update_password(
-        response=response,
+        # response=response,
         session=session,
         user=user,
         new_password=new_password,

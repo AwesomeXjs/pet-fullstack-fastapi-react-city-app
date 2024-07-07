@@ -1,3 +1,4 @@
+from uuid import UUID
 from typing import Annotated
 
 from fastapi import APIRouter, Depends
@@ -38,7 +39,7 @@ async def get_todos_by_user(
 
 @router.delete("/del")
 async def delete_todo_by_id(
-    id: int,
+    id: UUID,
     todo_service: TodoService = Depends(todo_service),
 ):
     return await todo_service.delete_one_by_id(id=id)

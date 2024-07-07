@@ -9,8 +9,7 @@ import LogoutIcon from '@mui/icons-material/Logout'
 import 'react-toastify/dist/ReactToastify.css'
 
 import styles from './styles.module.scss'
-import axios from 'axios'
-import toast from 'react-hot-toast'
+import { logoutUs } from '../../../api_service/api_service'
 
 interface NavProps {
 	handleOpen: () => void
@@ -19,24 +18,10 @@ interface NavProps {
 }
 
 const LabelBottomNavigation: FC<NavProps> = ({ handleOpen, auth, setAuth }) => {
-	const logoutUs = () => {
-		const my_prom = axios
-			.post('/auth/logout', { withCredentials: true })
-			.then(function () {
-				toast.success('Досвидания!')
-				setAuth(false)
-			})
-			.catch(function () {
-				setAuth(false)
-				toast.success('Досвидания!')
-			})
-		toast.promise(my_prom, {
-			loading: 'Ожидание...',
-
-			success: <b>Ответ получен!.</b>,
-			error: <b>Could not save.</b>,
-		})
+	const logoutFx = () => {
+		logoutUs('/auth/logout', setAuth)
 	}
+
 	const [value, setValue] = React.useState('')
 
 	const handleChange = (
@@ -77,7 +62,7 @@ const LabelBottomNavigation: FC<NavProps> = ({ handleOpen, auth, setAuth }) => {
 					/>
 				) : (
 					<BottomNavigationAction
-						onClick={logoutUs}
+						onClick={logoutFx}
 						label='Logout'
 						value='Logout'
 						icon={<LogoutIcon />}

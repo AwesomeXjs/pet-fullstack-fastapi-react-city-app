@@ -6,8 +6,7 @@ import Typography from '@material-ui/core/Typography'
 import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button'
 import InputForm from './input/InputForm'
-import axios from 'axios'
-import toast from 'react-hot-toast'
+import { universalUrlRegisterAndLogin } from '../../api_service/api_service'
 
 interface TabPanelProps {
 	children?: React.ReactNode
@@ -67,60 +66,25 @@ const RegistrtionForm: FC<RegisterProps> = ({ setOpen, setAuth }) => {
 	) => {
 		setValue(newValue)
 	}
-	const universalUrlRegisterAndLogin = (url: string) => {
-		const data_json = JSON.stringify({ username: username, password: password })
-		if (!password || !username) {
-			toast.error('Нужно ввести юзернейм и пароль!')
-			return
-		}
-		const my_prom = axios({
-			method: 'POST',
-			url: url,
-			data: data_json,
-			headers: {
-				'Content-Type': 'application/json',
-			},
-		})
-			.then(function (response) {
-				if (response.status == 202) {
-					toast.error('Пользователь с таким юзернеймом уже зарегестрирован!')
-					return
-				}
-				if (response.status == 201) {
-					toast.success(
-						`Вы успешно прошли регистрацию! ${response.data.username}, добро пожаловать!`
-					)
-					setOpen(false)
-					setAuth(true)
-					return
-				}
-				if (response.status == 200) {
-					toast.success('Вы успешно вошли в систему!', {})
-					setOpen(false)
-					setAuth(true)
-					return
-				}
-				console.log(response)
-			})
-			.catch(function () {
-				toast.error('Что то пошло не так попробуйте позже!')
-				setOpen(false)
-			})
-
-		toast.promise(my_prom, {
-			loading: 'Ожидание...',
-
-			success: <b>Ответ получен!.</b>,
-			error: <b>Could not save.</b>,
-		})
-	}
 
 	const registerAndLoginHandler = () => {
 		if (label == 'Регистрация') {
-			universalUrlRegisterAndLogin('/auth/register')
+			universalUrlRegisterAndLogin(
+				'/auth/register',
+				username,
+				password,
+				setOpen,
+				setAuth
+			)
 			return
 		} else {
-			universalUrlRegisterAndLogin('/auth/login')
+			universalUrlRegisterAndLogin(
+				'/auth/login',
+				username,
+				password,
+				setOpen,
+				setAuth
+			)
 		}
 	}
 

@@ -1,3 +1,4 @@
+from uuid import UUID
 from datetime import datetime, UTC
 
 from pydantic import BaseModel, Field, ConfigDict
@@ -19,7 +20,7 @@ class ToDoDeleteSchema(BaseModel):
 
 
 class ToDoSchema(ToDoCreateSchema):
-    id: int
+    id: UUID
     model_config = ConfigDict()
 
 
