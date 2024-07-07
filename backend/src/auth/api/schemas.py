@@ -1,3 +1,5 @@
+from uuid import UUID
+
 from pydantic import BaseModel, ConfigDict, Field
 
 
@@ -21,7 +23,7 @@ class UserUpdateSchema(BaseModel):
 
 
 class UserSchema(UserCreateSchema):
-    id: int
+    id: UUID
 
 
 class LogoutSchema(BaseModel):

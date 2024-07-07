@@ -443,6 +443,14 @@
         "documentation": {}
     },
     {
+        "label": "UUID",
+        "importPath": "uuid",
+        "description": "uuid",
+        "isExtraImport": true,
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
         "label": "datetime",
         "importPath": "datetime",
         "description": "datetime",
@@ -1380,7 +1388,7 @@
         "kind": 6,
         "importPath": "src.auth.api.schemas",
         "description": "src.auth.api.schemas",
-        "peekOfCode": "class UserRegisterSchema(UserCreateSchema):\n    password: str = Field(min_length=5)\nclass UserLoginSchema(BaseModel):\n    username: str = Field(max_length=20)\n    password: str = Field(min_length=5)\nclass UserUpdateSchema(BaseModel):\n    username: str | None = None\n    password: str | None = None\nclass UserSchema(UserCreateSchema):\n    id: int",
+        "peekOfCode": "class UserRegisterSchema(UserCreateSchema):\n    password: str = Field(min_length=5)\nclass UserLoginSchema(BaseModel):\n    username: str = Field(max_length=20)\n    password: str = Field(min_length=5)\nclass UserUpdateSchema(BaseModel):\n    username: str | None = None\n    password: str | None = None\nclass UserSchema(UserCreateSchema):\n    id: UUID",
         "detail": "src.auth.api.schemas",
         "documentation": {}
     },
@@ -1389,7 +1397,7 @@
         "kind": 6,
         "importPath": "src.auth.api.schemas",
         "description": "src.auth.api.schemas",
-        "peekOfCode": "class UserLoginSchema(BaseModel):\n    username: str = Field(max_length=20)\n    password: str = Field(min_length=5)\nclass UserUpdateSchema(BaseModel):\n    username: str | None = None\n    password: str | None = None\nclass UserSchema(UserCreateSchema):\n    id: int\nclass LogoutSchema(BaseModel):\n    Status: str",
+        "peekOfCode": "class UserLoginSchema(BaseModel):\n    username: str = Field(max_length=20)\n    password: str = Field(min_length=5)\nclass UserUpdateSchema(BaseModel):\n    username: str | None = None\n    password: str | None = None\nclass UserSchema(UserCreateSchema):\n    id: UUID\nclass LogoutSchema(BaseModel):\n    Status: str",
         "detail": "src.auth.api.schemas",
         "documentation": {}
     },
@@ -1398,7 +1406,7 @@
         "kind": 6,
         "importPath": "src.auth.api.schemas",
         "description": "src.auth.api.schemas",
-        "peekOfCode": "class UserUpdateSchema(BaseModel):\n    username: str | None = None\n    password: str | None = None\nclass UserSchema(UserCreateSchema):\n    id: int\nclass LogoutSchema(BaseModel):\n    Status: str\n    data: str",
+        "peekOfCode": "class UserUpdateSchema(BaseModel):\n    username: str | None = None\n    password: str | None = None\nclass UserSchema(UserCreateSchema):\n    id: UUID\nclass LogoutSchema(BaseModel):\n    Status: str\n    data: str",
         "detail": "src.auth.api.schemas",
         "documentation": {}
     },
@@ -1407,7 +1415,7 @@
         "kind": 6,
         "importPath": "src.auth.api.schemas",
         "description": "src.auth.api.schemas",
-        "peekOfCode": "class UserSchema(UserCreateSchema):\n    id: int\nclass LogoutSchema(BaseModel):\n    Status: str\n    data: str",
+        "peekOfCode": "class UserSchema(UserCreateSchema):\n    id: UUID\nclass LogoutSchema(BaseModel):\n    Status: str\n    data: str",
         "detail": "src.auth.api.schemas",
         "documentation": {}
     },
