@@ -1,8 +1,8 @@
-"""with todos
+"""create tabkes
 
-Revision ID: 70adbc21d2aa
+Revision ID: 8fef70ab7a5c
 Revises: 
-Create Date: 2024-07-06 18:13:54.936543
+Create Date: 2024-07-07 06:31:03.839379
 
 """
 
@@ -13,7 +13,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision: str = "70adbc21d2aa"
+revision: str = "8fef70ab7a5c"
 down_revision: Union[str, None] = None
 branch_labels: Union[str, Sequence[str], None] = None
 depends_on: Union[str, Sequence[str], None] = None

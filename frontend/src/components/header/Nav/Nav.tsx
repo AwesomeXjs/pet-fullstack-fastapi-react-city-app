@@ -19,20 +19,6 @@ interface NavProps {
 }
 
 const LabelBottomNavigation: FC<NavProps> = ({ handleOpen, auth, setAuth }) => {
-	// const [payload, setPayload] = useState()
-
-	// const getPayload = () => {
-	// 	axios
-	// 		.get('/auth/payload')
-	// 		.then(function (response) {
-	// 			console.log(response.data)
-	// 		})
-	// 		.catch(function (error) {
-	// 			console.log(error)
-	// 			setAuth(false)
-	// 		})
-	// }
-
 	const logoutUs = () => {
 		const my_prom = axios
 			.post('/auth/logout', { withCredentials: true })
