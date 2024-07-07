@@ -13,7 +13,9 @@ class Db_Settings(BaseSettings):
     DB_PASS: str
     DB_USER: str
 
+    DB_HOST_TEST: str
     DB_NAME_TEST: str
+    DB_PORT_TEST: int
 
     @property
     def postgres_db_url(self):
@@ -21,7 +23,7 @@ class Db_Settings(BaseSettings):
 
     @property
     def postgres_db_url_test(self):
-        return f"postgresql+asyncpg://{self.DB_USER}:{self.DB_PASS}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME_TEST}"
+        return f"postgresql+asyncpg://{self.DB_USER}:{self.DB_PASS}@{self.DB_HOST_TEST}:{self.DB_PORT_TEST}/{self.DB_NAME_TEST}"
 
     model_config = SettingsConfigDict(env_file=SRC_DIR / ".env")
 

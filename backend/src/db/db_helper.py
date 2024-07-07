@@ -22,6 +22,7 @@ class DB_Helper:
 
 
 db_helper = DB_Helper(
+    # url=db_settings.postgres_db_url,
     url=db_settings.postgres_db_url,
     echo=True,
     pool_size=50,

@@ -13,6 +13,7 @@ from src.db.models import Base
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
+print(db_settings.postgres_db_url)
 config.set_main_option(
     "sqlalchemy.url",
     db_settings.postgres_db_url,

@@ -8,7 +8,6 @@ from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 from main import app
 from src.db import db_settings
 from src.db.models import Base
-from src.auth import auth_service
 from src.db.models.user import User
 from src.db.models.todo import Todo
 from src.dependencies.session_dep import session_dependency
@@ -21,7 +20,13 @@ engine_test = create_async_engine(
     echo=True,
 )
 session_factory_test = async_sessionmaker(bind=engine_test)
-print(DB_URL_TEST)
+
+
+##############################################
+##############################################
+
+##############################################
+##############################################
 
 
 # session dependency
@@ -50,3 +55,65 @@ async def ac() -> AsyncGenerator[AsyncClient, None]:
         transport=ASGITransport(app=app), base_url="http://test"
     ) as ac:
         yield ac
+
+
+##############################################
+##############################################
+
+##############################################
+##############################################
+
+
+@pytest.fixture()
+def user_data():
+    user = {
+        "username": "awsx",
+        "password": "awsx5",
+    }
+    return user
+
+
+tables = [User, Todo]
+
+
+# ОЧИСТКА ТАБЛИЦ ДО ТЕСТА И ПОСЛЕ ТЕСТА
+@pytest.fixture(scope="function", autouse=True)
+async def clean_tables():
+    async with session_factory_test() as session:
+        for table in tables:
+            query = delete(table)
+            await session.execute(query)
+        await session.commit()
+    yield
+    async with session_factory_test() as session:
+        for table in tables:
+            query = delete(table)
+            await session.execute(query)
+        await session.commit()
+
+
+# ПОИСК ИТЕМА ПО ID В БАЗЕ ДЛЯ ПРОВЕРКИ
+@pytest.fixture
+async def get_item_by_filter():
+
+    async def get_item_from_db_by_uuid(model, **filter_by):
+        async with session_factory_test() as session:
+            query = select(model).filter_by(**filter_by)
+            res = await session.execute(query)
+            item = res.scalar_one_or_none()
+            return item
+
+    return get_item_from_db_by_uuid
+
+
+# СОЗДАНИЕ ИТЕМА В БД ПЕРЕД ТЕСТОМ
+@pytest.fixture
+async def create_item_in_db():
+
+    async def create_item(model, **values):
+        async with session_factory_test() as session:
+            stmt = insert(model).values(**values)
+            await session.execute(stmt)
+            await session.commit()
+
+    return create_item

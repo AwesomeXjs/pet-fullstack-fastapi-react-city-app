@@ -819,6 +819,38 @@
         "documentation": {}
     },
     {
+        "label": "auth_service",
+        "importPath": "src.auth.auth_service",
+        "description": "src.auth.auth_service",
+        "isExtraImport": true,
+        "detail": "src.auth.auth_service",
+        "documentation": {}
+    },
+    {
+        "label": "auth_service",
+        "importPath": "src.auth.auth_service",
+        "description": "src.auth.auth_service",
+        "isExtraImport": true,
+        "detail": "src.auth.auth_service",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "src.db.models.user",
+        "description": "src.db.models.user",
+        "isExtraImport": true,
+        "detail": "src.db.models.user",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "src.db.models.user",
+        "description": "src.db.models.user",
+        "isExtraImport": true,
+        "detail": "src.db.models.user",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "importPath": "src.db.models.user",
         "description": "src.db.models.user",
@@ -1157,12 +1189,19 @@
         "documentation": {}
     },
     {
-        "label": "pytest",
-        "kind": 6,
+        "label": "AsyncClient",
+        "importPath": "httpx",
+        "description": "httpx",
         "isExtraImport": true,
-        "importPath": "pytest",
-        "description": "pytest",
-        "detail": "pytest",
+        "detail": "httpx",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncClient",
+        "importPath": "httpx",
+        "description": "httpx",
+        "isExtraImport": true,
+        "detail": "httpx",
         "documentation": {}
     },
     {
@@ -1182,19 +1221,20 @@
         "documentation": {}
     },
     {
+        "label": "pytest",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pytest",
+        "description": "pytest",
+        "detail": "pytest",
+        "documentation": {}
+    },
+    {
         "label": "app",
         "importPath": "main",
         "description": "main",
         "isExtraImport": true,
         "detail": "main",
-        "documentation": {}
-    },
-    {
-        "label": "auth_service",
-        "importPath": "src.auth",
-        "description": "src.auth",
-        "isExtraImport": true,
-        "detail": "src.auth",
         "documentation": {}
     },
     {
@@ -1271,7 +1311,7 @@
         "kind": 5,
         "importPath": "alembic.env",
         "description": "alembic.env",
-        "peekOfCode": "config = context.config\nconfig.set_main_option(\n    \"sqlalchemy.url\",\n    db_settings.postgres_db_url,\n)\n# Interpret the config file for Python logging.\n# This line sets up loggers basically.\nif config.config_file_name is not None:\n    fileConfig(config.config_file_name)\n# add your model's MetaData object here",
+        "peekOfCode": "config = context.config\nprint(db_settings.postgres_db_url)\nconfig.set_main_option(\n    \"sqlalchemy.url\",\n    db_settings.postgres_db_url,\n)\n# Interpret the config file for Python logging.\n# This line sets up loggers basically.\nif config.config_file_name is not None:\n    fileConfig(config.config_file_name)",
         "detail": "alembic.env",
         "documentation": {}
     },
@@ -1514,7 +1554,7 @@
         "kind": 6,
         "importPath": "src.db.db_config",
         "description": "src.db.db_config",
-        "peekOfCode": "class Db_Settings(BaseSettings):\n    DB_HOST: str\n    DB_PORT: int\n    DB_NAME: str\n    DB_PASS: str\n    DB_USER: str\n    DB_NAME_TEST: str\n    @property\n    def postgres_db_url(self):\n        return f\"postgresql+asyncpg://{self.DB_USER}:{self.DB_PASS}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}\"",
+        "peekOfCode": "class Db_Settings(BaseSettings):\n    DB_HOST: str\n    DB_PORT: int\n    DB_NAME: str\n    DB_PASS: str\n    DB_USER: str\n    DB_HOST_TEST: str\n    DB_NAME_TEST: str\n    DB_PORT_TEST: int\n    @property",
         "detail": "src.db.db_config",
         "documentation": {}
     },
@@ -1523,7 +1563,7 @@
         "kind": 5,
         "importPath": "src.db.db_config",
         "description": "src.db.db_config",
-        "peekOfCode": "SRC_DIR = Path(__file__).parent.parent.parent\nclass Db_Settings(BaseSettings):\n    DB_HOST: str\n    DB_PORT: int\n    DB_NAME: str\n    DB_PASS: str\n    DB_USER: str\n    DB_NAME_TEST: str\n    @property\n    def postgres_db_url(self):",
+        "peekOfCode": "SRC_DIR = Path(__file__).parent.parent.parent\nclass Db_Settings(BaseSettings):\n    DB_HOST: str\n    DB_PORT: int\n    DB_NAME: str\n    DB_PASS: str\n    DB_USER: str\n    DB_HOST_TEST: str\n    DB_NAME_TEST: str\n    DB_PORT_TEST: int",
         "detail": "src.db.db_config",
         "documentation": {}
     },
@@ -1550,7 +1590,7 @@
         "kind": 5,
         "importPath": "src.db.db_helper",
         "description": "src.db.db_helper",
-        "peekOfCode": "db_helper = DB_Helper(\n    url=db_settings.postgres_db_url,\n    echo=True,\n    pool_size=50,\n)",
+        "peekOfCode": "db_helper = DB_Helper(\n    # url=db_settings.postgres_db_url,\n    url=db_settings.postgres_db_url,\n    echo=True,\n    pool_size=50,\n)",
         "detail": "src.db.db_helper",
         "documentation": {}
     },
@@ -1672,11 +1712,20 @@
         "documentation": {}
     },
     {
+        "label": "user_data",
+        "kind": 2,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "def user_data():\n    user = {\n        \"username\": \"awsx\",\n        \"password\": \"awsx5\",\n    }\n    return user\ntables = [User, Todo]\n# ОЧИСТКА ТАБЛИЦ ДО ТЕСТА И ПОСЛЕ ТЕСТА\n@pytest.fixture(scope=\"function\", autouse=True)\nasync def clean_tables():",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
         "label": "DB_URL_TEST",
         "kind": 5,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "DB_URL_TEST = db_settings.postgres_db_url_test\nengine_test = create_async_engine(\n    url=DB_URL_TEST,\n    poolclass=NullPool,\n    echo=True,\n)\nsession_factory_test = async_sessionmaker(bind=engine_test)\nprint(DB_URL_TEST)\n# session dependency\nasync def override_session_dep():",
+        "peekOfCode": "DB_URL_TEST = db_settings.postgres_db_url_test\nengine_test = create_async_engine(\n    url=DB_URL_TEST,\n    poolclass=NullPool,\n    echo=True,\n)\nsession_factory_test = async_sessionmaker(bind=engine_test)\n##############################################\n##############################################\n##############################################",
         "detail": "tests.conftest",
         "documentation": {}
     },
@@ -1685,7 +1734,7 @@
         "kind": 5,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "engine_test = create_async_engine(\n    url=DB_URL_TEST,\n    poolclass=NullPool,\n    echo=True,\n)\nsession_factory_test = async_sessionmaker(bind=engine_test)\nprint(DB_URL_TEST)\n# session dependency\nasync def override_session_dep():\n    async with session_factory_test() as session:",
+        "peekOfCode": "engine_test = create_async_engine(\n    url=DB_URL_TEST,\n    poolclass=NullPool,\n    echo=True,\n)\nsession_factory_test = async_sessionmaker(bind=engine_test)\n##############################################\n##############################################\n##############################################\n##############################################",
         "detail": "tests.conftest",
         "documentation": {}
     },
@@ -1694,7 +1743,7 @@
         "kind": 5,
         "importPath": "tests.conftest",
         "description": "tests.conftest",
-        "peekOfCode": "session_factory_test = async_sessionmaker(bind=engine_test)\nprint(DB_URL_TEST)\n# session dependency\nasync def override_session_dep():\n    async with session_factory_test() as session:\n        yield session\n        await session.close()\napp.dependency_overrides[session_dependency] = override_session_dep\n@pytest.fixture(scope=\"session\", autouse=True)\nasync def create_tables():",
+        "peekOfCode": "session_factory_test = async_sessionmaker(bind=engine_test)\n##############################################\n##############################################\n##############################################\n##############################################\n# session dependency\nasync def override_session_dep():\n    async with session_factory_test() as session:\n        yield session\n        await session.close()",
         "detail": "tests.conftest",
         "documentation": {}
     },
@@ -1704,6 +1753,15 @@
         "importPath": "tests.conftest",
         "description": "tests.conftest",
         "peekOfCode": "app.dependency_overrides[session_dependency] = override_session_dep\n@pytest.fixture(scope=\"session\", autouse=True)\nasync def create_tables():\n    async with engine_test.begin() as conn:\n        await conn.run_sync(Base.metadata.drop_all)\n        await conn.run_sync(Base.metadata.create_all)\n    yield\n    # async with engine_test.begin() as conn:\n    # await conn.run_sync(Base.metadata.drop_all)\n@pytest.fixture(scope=\"session\")",
+        "detail": "tests.conftest",
+        "documentation": {}
+    },
+    {
+        "label": "tables",
+        "kind": 5,
+        "importPath": "tests.conftest",
+        "description": "tests.conftest",
+        "peekOfCode": "tables = [User, Todo]\n# ОЧИСТКА ТАБЛИЦ ДО ТЕСТА И ПОСЛЕ ТЕСТА\n@pytest.fixture(scope=\"function\", autouse=True)\nasync def clean_tables():\n    async with session_factory_test() as session:\n        for table in tables:\n            query = delete(table)\n            await session.execute(query)\n        await session.commit()\n    yield",
         "detail": "tests.conftest",
         "documentation": {}
     },
