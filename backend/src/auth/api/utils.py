@@ -6,6 +6,7 @@ from src.app_config import app_settings
 from src.auth.jwt_service import jwt_service
 from src.auth.api.schemas import UserCreateSchema
 
+
 # создаем jwt и кладем его в куки
 async def create_jwt_and_set_cookie(
     response: Response,

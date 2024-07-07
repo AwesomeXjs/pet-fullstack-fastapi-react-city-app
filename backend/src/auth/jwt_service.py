@@ -49,7 +49,7 @@ class JWT_Service:
     def decode_jwt(
         self,
         token: str | bytes,
-    ):
+    ) -> dict:
         decoded = jwt.decode(
             token,
             self.PUBLIC_KEY,

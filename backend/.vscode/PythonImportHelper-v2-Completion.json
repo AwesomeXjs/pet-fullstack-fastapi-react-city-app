@@ -16,7 +16,39 @@
         "documentation": {}
     },
     {
-        "label": "Sequence",
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TYPE_CHECKING",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "TYPE_CHECKING",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Annotated",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -41,14 +73,6 @@
     },
     {
         "label": "Annotated",
-        "importPath": "typing",
-        "description": "typing",
-        "isExtraImport": true,
-        "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "Union",
         "importPath": "typing",
         "description": "typing",
         "isExtraImport": true,
@@ -61,14 +85,6 @@
         "description": "typing",
         "isExtraImport": true,
         "detail": "typing",
-        "documentation": {}
-    },
-    {
-        "label": "op",
-        "importPath": "alembic",
-        "description": "alembic",
-        "isExtraImport": true,
-        "detail": "alembic",
         "documentation": {}
     },
     {
@@ -121,7 +137,47 @@
         "documentation": {}
     },
     {
+        "label": "select",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "ForeignKey",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "String",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "select",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
+        "label": "delete",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -145,6 +201,14 @@
         "documentation": {}
     },
     {
+        "label": "NullPool",
+        "importPath": "sqlalchemy",
+        "description": "sqlalchemy",
+        "isExtraImport": true,
+        "detail": "sqlalchemy",
+        "documentation": {}
+    },
+    {
         "label": "delete",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
@@ -153,7 +217,7 @@
         "documentation": {}
     },
     {
-        "label": "NullPool",
+        "label": "insert",
         "importPath": "sqlalchemy",
         "description": "sqlalchemy",
         "isExtraImport": true,
@@ -242,6 +306,22 @@
         "documentation": {}
     },
     {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "AsyncSession",
+        "importPath": "sqlalchemy.ext.asyncio",
+        "description": "sqlalchemy.ext.asyncio",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.ext.asyncio",
+        "documentation": {}
+    },
+    {
         "label": "create_async_engine",
         "importPath": "sqlalchemy.ext.asyncio",
         "description": "sqlalchemy.ext.asyncio",
@@ -274,6 +354,14 @@
         "documentation": {}
     },
     {
+        "label": "db_settings",
+        "importPath": "src.db",
+        "description": "src.db",
+        "isExtraImport": true,
+        "detail": "src.db",
+        "documentation": {}
+    },
+    {
         "label": "Base",
         "importPath": "src.db.models",
         "description": "src.db.models",
@@ -298,7 +386,167 @@
         "documentation": {}
     },
     {
-        "label": "Response",
+        "label": "User",
+        "importPath": "src.db.models",
+        "description": "src.db.models",
+        "isExtraImport": true,
+        "detail": "src.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Todo",
+        "importPath": "src.db.models",
+        "description": "src.db.models",
+        "isExtraImport": true,
+        "detail": "src.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "Base",
+        "importPath": "src.db.models",
+        "description": "src.db.models",
+        "isExtraImport": true,
+        "detail": "src.db.models",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "UTC",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "UTC",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "UTC",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "UTC",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigDict",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "ConfigDict",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -323,14 +571,6 @@
     },
     {
         "label": "Response",
-        "importPath": "fastapi",
-        "description": "fastapi",
-        "isExtraImport": true,
-        "detail": "fastapi",
-        "documentation": {}
-    },
-    {
-        "label": "Form",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
@@ -394,11 +634,123 @@
         "documentation": {}
     },
     {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "status",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
         "label": "FastAPI",
         "importPath": "fastapi",
         "description": "fastapi",
         "isExtraImport": true,
         "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Todo",
+        "importPath": "src.db.models.todo",
+        "description": "src.db.models.todo",
+        "isExtraImport": true,
+        "detail": "src.db.models.todo",
+        "documentation": {}
+    },
+    {
+        "label": "Todo",
+        "importPath": "src.db.models.todo",
+        "description": "src.db.models.todo",
+        "isExtraImport": true,
+        "detail": "src.db.models.todo",
+        "documentation": {}
+    },
+    {
+        "label": "Todo",
+        "importPath": "src.db.models.todo",
+        "description": "src.db.models.todo",
+        "isExtraImport": true,
+        "detail": "src.db.models.todo",
+        "documentation": {}
+    },
+    {
+        "label": "Todo",
+        "importPath": "src.db.models.todo",
+        "description": "src.db.models.todo",
+        "isExtraImport": true,
+        "detail": "src.db.models.todo",
+        "documentation": {}
+    },
+    {
+        "label": "get_todo_by_id",
+        "importPath": "src.dependencies.todo_dep",
+        "description": "src.dependencies.todo_dep",
+        "isExtraImport": true,
+        "detail": "src.dependencies.todo_dep",
+        "documentation": {}
+    },
+    {
+        "label": "todo_service",
+        "importPath": "src.services.todo_service",
+        "description": "src.services.todo_service",
+        "isExtraImport": true,
+        "detail": "src.services.todo_service",
+        "documentation": {}
+    },
+    {
+        "label": "TodoService",
+        "importPath": "src.services.todo_service",
+        "description": "src.services.todo_service",
+        "isExtraImport": true,
+        "detail": "src.services.todo_service",
+        "documentation": {}
+    },
+    {
+        "label": "todo_service",
+        "importPath": "src.services.todo_service",
+        "description": "src.services.todo_service",
+        "isExtraImport": true,
+        "detail": "src.services.todo_service",
+        "documentation": {}
+    },
+    {
+        "label": "TodoService",
+        "importPath": "src.services.todo_service",
+        "description": "src.services.todo_service",
+        "isExtraImport": true,
+        "detail": "src.services.todo_service",
         "documentation": {}
     },
     {
@@ -426,62 +778,6 @@
         "documentation": {}
     },
     {
-        "label": "unauth_401_exc",
-        "importPath": "src.auth.api.exceptions",
-        "description": "src.auth.api.exceptions",
-        "isExtraImport": true,
-        "detail": "src.auth.api.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "unauth_401_exc",
-        "importPath": "src.auth.api.exceptions",
-        "description": "src.auth.api.exceptions",
-        "isExtraImport": true,
-        "detail": "src.auth.api.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "not_accept_406_exc",
-        "importPath": "src.auth.api.exceptions",
-        "description": "src.auth.api.exceptions",
-        "isExtraImport": true,
-        "detail": "src.auth.api.exceptions",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "ConfigDict",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "Field",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
-        "label": "BaseModel",
-        "importPath": "pydantic",
-        "description": "pydantic",
-        "isExtraImport": true,
-        "detail": "pydantic",
-        "documentation": {}
-    },
-    {
         "label": "User",
         "importPath": "src.db.models.user",
         "description": "src.db.models.user",
@@ -490,11 +786,11 @@
         "documentation": {}
     },
     {
-        "label": "app_settings",
-        "importPath": "src.app_config",
-        "description": "src.app_config",
+        "label": "User",
+        "importPath": "src.db.models.user",
+        "description": "src.db.models.user",
         "isExtraImport": true,
-        "detail": "src.app_config",
+        "detail": "src.db.models.user",
         "documentation": {}
     },
     {
@@ -562,6 +858,22 @@
         "documentation": {}
     },
     {
+        "label": "session_dependency",
+        "importPath": "src.dependencies.session_dep",
+        "description": "src.dependencies.session_dep",
+        "isExtraImport": true,
+        "detail": "src.dependencies.session_dep",
+        "documentation": {}
+    },
+    {
+        "label": "session_dependency",
+        "importPath": "src.dependencies.session_dep",
+        "description": "src.dependencies.session_dep",
+        "isExtraImport": true,
+        "detail": "src.dependencies.session_dep",
+        "documentation": {}
+    },
+    {
         "label": "auth_by_jwt_payload",
         "importPath": "src.dependencies.auth_dep",
         "description": "src.dependencies.auth_dep",
@@ -604,27 +916,27 @@
         "documentation": {}
     },
     {
-        "label": "timedelta",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "Mapped",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
         "isExtraImport": true,
-        "detail": "datetime",
+        "detail": "sqlalchemy.orm",
         "documentation": {}
     },
     {
-        "label": "datetime",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "mapped_column",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
         "isExtraImport": true,
-        "detail": "datetime",
+        "detail": "sqlalchemy.orm",
         "documentation": {}
     },
     {
-        "label": "UTC",
-        "importPath": "datetime",
-        "description": "datetime",
+        "label": "relationship",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
         "isExtraImport": true,
-        "detail": "datetime",
+        "detail": "sqlalchemy.orm",
         "documentation": {}
     },
     {
@@ -637,6 +949,14 @@
     },
     {
         "label": "mapped_column",
+        "importPath": "sqlalchemy.orm",
+        "description": "sqlalchemy.orm",
+        "isExtraImport": true,
+        "detail": "sqlalchemy.orm",
+        "documentation": {}
+    },
+    {
+        "label": "relationship",
         "importPath": "sqlalchemy.orm",
         "description": "sqlalchemy.orm",
         "isExtraImport": true,
@@ -724,68 +1044,76 @@
         "documentation": {}
     },
     {
+        "label": "unauth_401_exc",
+        "importPath": "src.auth.api.exceptions",
+        "description": "src.auth.api.exceptions",
+        "isExtraImport": true,
+        "detail": "src.auth.api.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "not_accept_406_exc",
+        "importPath": "src.auth.api.exceptions",
+        "description": "src.auth.api.exceptions",
+        "isExtraImport": true,
+        "detail": "src.auth.api.exceptions",
+        "documentation": {}
+    },
+    {
+        "label": "ABC",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "abstractmethod",
+        "importPath": "abc",
+        "description": "abc",
+        "isExtraImport": true,
+        "detail": "abc",
+        "documentation": {}
+    },
+    {
+        "label": "ToDoCreateSchema",
+        "importPath": "src.api.v1.todo.schemas",
+        "description": "src.api.v1.todo.schemas",
+        "isExtraImport": true,
+        "detail": "src.api.v1.todo.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ToDoSchema",
+        "importPath": "src.api.v1.todo.schemas",
+        "description": "src.api.v1.todo.schemas",
+        "isExtraImport": true,
+        "detail": "src.api.v1.todo.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "SQLAlchemyRepository",
+        "importPath": "src.respositories",
+        "description": "src.respositories",
+        "isExtraImport": true,
+        "detail": "src.respositories",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractRepository",
+        "importPath": "src.respositories",
+        "description": "src.respositories",
+        "isExtraImport": true,
+        "detail": "src.respositories",
+        "documentation": {}
+    },
+    {
         "label": "pytest",
         "kind": 6,
         "isExtraImport": true,
         "importPath": "pytest",
         "description": "pytest",
         "detail": "pytest",
-        "documentation": {}
-    },
-    {
-        "label": "AsyncClient",
-        "importPath": "httpx",
-        "description": "httpx",
-        "isExtraImport": true,
-        "detail": "httpx",
-        "documentation": {}
-    },
-    {
-        "label": "AsyncClient",
-        "importPath": "httpx",
-        "description": "httpx",
-        "isExtraImport": true,
-        "detail": "httpx",
-        "documentation": {}
-    },
-    {
-        "label": "AsyncClient",
-        "importPath": "httpx",
-        "description": "httpx",
-        "isExtraImport": true,
-        "detail": "httpx",
-        "documentation": {}
-    },
-    {
-        "label": "AsyncClient",
-        "importPath": "httpx",
-        "description": "httpx",
-        "isExtraImport": true,
-        "detail": "httpx",
-        "documentation": {}
-    },
-    {
-        "label": "AsyncClient",
-        "importPath": "httpx",
-        "description": "httpx",
-        "isExtraImport": true,
-        "detail": "httpx",
-        "documentation": {}
-    },
-    {
-        "label": "AsyncClient",
-        "importPath": "httpx",
-        "description": "httpx",
-        "isExtraImport": true,
-        "detail": "httpx",
-        "documentation": {}
-    },
-    {
-        "label": "AsyncClient",
-        "importPath": "httpx",
-        "description": "httpx",
-        "isExtraImport": true,
-        "detail": "httpx",
         "documentation": {}
     },
     {
@@ -805,62 +1133,6 @@
         "documentation": {}
     },
     {
-        "label": "User",
-        "importPath": "db.models.user",
-        "description": "db.models.user",
-        "isExtraImport": true,
-        "detail": "db.models.user",
-        "documentation": {}
-    },
-    {
-        "label": "session_factory_test",
-        "importPath": "tests.conftest",
-        "description": "tests.conftest",
-        "isExtraImport": true,
-        "detail": "tests.conftest",
-        "documentation": {}
-    },
-    {
-        "label": "check_item_in_db",
-        "importPath": "tests.conftest",
-        "description": "tests.conftest",
-        "isExtraImport": true,
-        "detail": "tests.conftest",
-        "documentation": {}
-    },
-    {
-        "label": "check_item_in_db",
-        "importPath": "tests.conftest",
-        "description": "tests.conftest",
-        "isExtraImport": true,
-        "detail": "tests.conftest",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "db.models",
-        "description": "db.models",
-        "isExtraImport": true,
-        "detail": "db.models",
-        "documentation": {}
-    },
-    {
-        "label": "User",
-        "importPath": "db.models",
-        "description": "db.models",
-        "isExtraImport": true,
-        "detail": "db.models",
-        "documentation": {}
-    },
-    {
-        "label": "Base",
-        "importPath": "db.models",
-        "description": "db.models",
-        "isExtraImport": true,
-        "detail": "db.models",
-        "documentation": {}
-    },
-    {
         "label": "app",
         "importPath": "main",
         "description": "main",
@@ -869,19 +1141,11 @@
         "documentation": {}
     },
     {
-        "label": "db_settings",
-        "importPath": "db",
-        "description": "db",
+        "label": "auth_service",
+        "importPath": "src.auth",
+        "description": "src.auth",
         "isExtraImport": true,
-        "detail": "db",
-        "documentation": {}
-    },
-    {
-        "label": "session_dependency",
-        "importPath": "dependencies.session_dep",
-        "description": "dependencies.session_dep",
-        "isExtraImport": true,
-        "detail": "dependencies.session_dep",
+        "detail": "src.auth",
         "documentation": {}
     },
     {
@@ -911,37 +1175,19 @@
     {
         "label": "upgrade",
         "kind": 2,
-        "importPath": "alembic.versions.2024_07_02_1709-8d6ed679dbf7_create_user_table",
-        "description": "alembic.versions.2024_07_02_1709-8d6ed679dbf7_create_user_table",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"users\",\n        sa.Column(\"username\", sa.String(length=20), nullable=False),\n        sa.Column(\"email\", sa.String(), nullable=False),\n        sa.Column(\"hashed_password\", sa.String(), nullable=False),\n        sa.Column(\"id\", sa.Integer(), nullable=False),\n        sa.PrimaryKeyConstraint(\"id\"),\n        sa.UniqueConstraint(\"email\"),",
-        "detail": "alembic.versions.2024_07_02_1709-8d6ed679dbf7_create_user_table",
+        "importPath": "alembic.versions.2024_07_06_1813-70adbc21d2aa_with_todos",
+        "description": "alembic.versions.2024_07_06_1813-70adbc21d2aa_with_todos",
+        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.create_table(\n        \"users\",\n        sa.Column(\"username\", sa.String(length=20), nullable=False),\n        sa.Column(\"hashed_password\", sa.String(), nullable=False),\n        sa.Column(\"id\", sa.Integer(), nullable=False),\n        sa.PrimaryKeyConstraint(\"id\"),\n        sa.UniqueConstraint(\"username\"),\n    )",
+        "detail": "alembic.versions.2024_07_06_1813-70adbc21d2aa_with_todos",
         "documentation": {}
     },
     {
         "label": "downgrade",
         "kind": 2,
-        "importPath": "alembic.versions.2024_07_02_1709-8d6ed679dbf7_create_user_table",
-        "description": "alembic.versions.2024_07_02_1709-8d6ed679dbf7_create_user_table",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table(\"users\")\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_07_02_1709-8d6ed679dbf7_create_user_table",
-        "documentation": {}
-    },
-    {
-        "label": "upgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_07_03_2231-2d9a345123d6_remove_email",
-        "description": "alembic.versions.2024_07_03_2231-2d9a345123d6_remove_email",
-        "peekOfCode": "def upgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_constraint(\"users_email_key\", \"users\", type_=\"unique\")\n    op.drop_column(\"users\", \"email\")\n    # ### end Alembic commands ###\ndef downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column(\n        \"users\",\n        sa.Column(\"email\", sa.VARCHAR(), autoincrement=False, nullable=False),",
-        "detail": "alembic.versions.2024_07_03_2231-2d9a345123d6_remove_email",
-        "documentation": {}
-    },
-    {
-        "label": "downgrade",
-        "kind": 2,
-        "importPath": "alembic.versions.2024_07_03_2231-2d9a345123d6_remove_email",
-        "description": "alembic.versions.2024_07_03_2231-2d9a345123d6_remove_email",
-        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.add_column(\n        \"users\",\n        sa.Column(\"email\", sa.VARCHAR(), autoincrement=False, nullable=False),\n    )\n    op.create_unique_constraint(\"users_email_key\", \"users\", [\"email\"])\n    # ### end Alembic commands ###",
-        "detail": "alembic.versions.2024_07_03_2231-2d9a345123d6_remove_email",
+        "importPath": "alembic.versions.2024_07_06_1813-70adbc21d2aa_with_todos",
+        "description": "alembic.versions.2024_07_06_1813-70adbc21d2aa_with_todos",
+        "peekOfCode": "def downgrade() -> None:\n    # ### commands auto generated by Alembic - please adjust! ###\n    op.drop_table(\"todos\")\n    op.drop_table(\"users\")\n    # ### end Alembic commands ###",
+        "detail": "alembic.versions.2024_07_06_1813-70adbc21d2aa_with_todos",
         "documentation": {}
     },
     {
@@ -987,6 +1233,60 @@
         "description": "alembic.env",
         "peekOfCode": "target_metadata = Base.metadata\n# other values from the config, defined by the needs of env.py,\n# can be acquired:\n# my_important_option = config.get_main_option(\"my_important_option\")\n# ... etc.\ndef run_migrations_offline() -> None:\n    \"\"\"Run migrations in 'offline' mode.\n    This configures the context with just a URL\n    and not an Engine, though an Engine is acceptable\n    here as well.  By skipping the Engine creation",
         "detail": "alembic.env",
+        "documentation": {}
+    },
+    {
+        "label": "ToDoCreateSchema",
+        "kind": 6,
+        "importPath": "src.api.v1.todo.schemas",
+        "description": "src.api.v1.todo.schemas",
+        "peekOfCode": "class ToDoCreateSchema(BaseModel):\n    user_username: str\n    title: str = Field(max_length=20)\n    description: str\nclass ToDoUpdateSchema(BaseModel):\n    title: str | None = None\n    description: str | None = None\nclass ToDoDeleteSchema(BaseModel):\n    title: str\nclass ToDoSchema(ToDoCreateSchema):",
+        "detail": "src.api.v1.todo.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ToDoUpdateSchema",
+        "kind": 6,
+        "importPath": "src.api.v1.todo.schemas",
+        "description": "src.api.v1.todo.schemas",
+        "peekOfCode": "class ToDoUpdateSchema(BaseModel):\n    title: str | None = None\n    description: str | None = None\nclass ToDoDeleteSchema(BaseModel):\n    title: str\nclass ToDoSchema(ToDoCreateSchema):\n    id: int\n    model_config = ConfigDict()\nclass ToDoSchemaReturn(ToDoCreateSchema):\n    created_at: datetime",
+        "detail": "src.api.v1.todo.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ToDoDeleteSchema",
+        "kind": 6,
+        "importPath": "src.api.v1.todo.schemas",
+        "description": "src.api.v1.todo.schemas",
+        "peekOfCode": "class ToDoDeleteSchema(BaseModel):\n    title: str\nclass ToDoSchema(ToDoCreateSchema):\n    id: int\n    model_config = ConfigDict()\nclass ToDoSchemaReturn(ToDoCreateSchema):\n    created_at: datetime",
+        "detail": "src.api.v1.todo.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ToDoSchema",
+        "kind": 6,
+        "importPath": "src.api.v1.todo.schemas",
+        "description": "src.api.v1.todo.schemas",
+        "peekOfCode": "class ToDoSchema(ToDoCreateSchema):\n    id: int\n    model_config = ConfigDict()\nclass ToDoSchemaReturn(ToDoCreateSchema):\n    created_at: datetime",
+        "detail": "src.api.v1.todo.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "ToDoSchemaReturn",
+        "kind": 6,
+        "importPath": "src.api.v1.todo.schemas",
+        "description": "src.api.v1.todo.schemas",
+        "peekOfCode": "class ToDoSchemaReturn(ToDoCreateSchema):\n    created_at: datetime",
+        "detail": "src.api.v1.todo.schemas",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "src.api.v1.todo.view",
+        "description": "src.api.v1.todo.view",
+        "peekOfCode": "router = APIRouter(prefix=\"/todo\", tags=[\"Todo\"])\n@router.post(\n    \"/create\",\n    response_model=ToDoSchemaReturn,\n)\nasync def create_todo(\n    todo: ToDoCreateSchema,\n    todo_service: TodoService = Depends(todo_service),\n):\n    return await todo_service.create_todo(todo)",
+        "detail": "src.api.v1.todo.view",
         "documentation": {}
     },
     {
@@ -1134,11 +1434,20 @@
         "documentation": {}
     },
     {
+        "label": "Todo",
+        "kind": 6,
+        "importPath": "src.db.models.todo",
+        "description": "src.db.models.todo",
+        "peekOfCode": "class Todo(Base):\n    title: Mapped[str] = mapped_column(String(50))\n    description: Mapped[str] = mapped_column(nullable=True)\n    created_at: Mapped[datetime] = mapped_column(default=datetime.now(UTC))\n    user_username: Mapped[str] = mapped_column(ForeignKey(\"users.username\"))\n    user: Mapped[\"User\"] = relationship(back_populates=\"todos\")",
+        "detail": "src.db.models.todo",
+        "documentation": {}
+    },
+    {
         "label": "User",
         "kind": 6,
         "importPath": "src.db.models.user",
         "description": "src.db.models.user",
-        "peekOfCode": "class User(Base):\n    username: Mapped[str] = mapped_column(String(20), unique=True)\n    hashed_password: Mapped[str]",
+        "peekOfCode": "class User(Base):\n    username: Mapped[str] = mapped_column(String(20), unique=True)\n    hashed_password: Mapped[str]\n    todos: Mapped[list[\"Todo\"]] = relationship(back_populates=\"user\")",
         "detail": "src.db.models.user",
         "documentation": {}
     },
@@ -1194,6 +1503,51 @@
         "description": "src.db.db_helper",
         "peekOfCode": "db_helper = DB_Helper(\n    url=db_settings.postgres_db_url,\n    echo=True,\n    pool_size=50,\n)",
         "detail": "src.db.db_helper",
+        "documentation": {}
+    },
+    {
+        "label": "AbstractRepository",
+        "kind": 6,
+        "importPath": "src.respositories._abc_repo",
+        "description": "src.respositories._abc_repo",
+        "peekOfCode": "class AbstractRepository(ABC):\n    @abstractmethod\n    async def create_one():\n        raise NotImplementedError\n    @abstractmethod\n    async def get_one():\n        raise NotImplementedError\n    @abstractmethod\n    async def get_all():\n        raise NotImplementedError",
+        "detail": "src.respositories._abc_repo",
+        "documentation": {}
+    },
+    {
+        "label": "SQLAlchemyRepository",
+        "kind": 6,
+        "importPath": "src.respositories._sqlalchemy_repo",
+        "description": "src.respositories._sqlalchemy_repo",
+        "peekOfCode": "class SQLAlchemyRepository(AbstractRepository):\n    model = None\n    def __init__(self, session: AsyncSession) -> None:\n        self.session = session\n    async def create_one(self, item):\n        stmt = insert(self.model).values(**item)\n        await self.session.execute(stmt)\n    async def get_one(self, **filter_by):\n        query = select(self.model).filter_by(**filter_by)\n        res = await self.session.execute(query)",
+        "detail": "src.respositories._sqlalchemy_repo",
+        "documentation": {}
+    },
+    {
+        "label": "TodoRepository",
+        "kind": 6,
+        "importPath": "src.services.todo_service",
+        "description": "src.services.todo_service",
+        "peekOfCode": "class TodoRepository(SQLAlchemyRepository):\n    model = Todo\nclass TodoService:\n    def __init__(\n        self,\n        repo,\n        session,\n    ):\n        self.repo: AbstractRepository = repo(session)\n        self.session = session",
+        "detail": "src.services.todo_service",
+        "documentation": {}
+    },
+    {
+        "label": "TodoService",
+        "kind": 6,
+        "importPath": "src.services.todo_service",
+        "description": "src.services.todo_service",
+        "peekOfCode": "class TodoService:\n    def __init__(\n        self,\n        repo,\n        session,\n    ):\n        self.repo: AbstractRepository = repo(session)\n        self.session = session\n    # создать todo\n    async def create_todo(",
+        "detail": "src.services.todo_service",
+        "documentation": {}
+    },
+    {
+        "label": "todo_service",
+        "kind": 2,
+        "importPath": "src.services.todo_service",
+        "description": "src.services.todo_service",
+        "peekOfCode": "def todo_service(session: Annotated[AsyncSession, Depends(session_dependency)]):\n    return TodoService(repo=TodoRepository, session=session)",
+        "detail": "src.services.todo_service",
         "documentation": {}
     },
     {
@@ -1260,12 +1614,12 @@
         "documentation": {}
     },
     {
-        "label": "user_data",
+        "label": "todo_data",
         "kind": 2,
-        "importPath": "tests.tests_auth.conftest",
-        "description": "tests.tests_auth.conftest",
-        "peekOfCode": "def user_data():\n    user = {\n        \"username\": \"awsx\",\n        \"password\": \"awsx5\",\n    }\n    return user\n@pytest.fixture\nasync def create_user_fixture():\n    async with session_factory_test() as session:\n        stmt = insert(User).values(",
-        "detail": "tests.tests_auth.conftest",
+        "importPath": "tests.test_todos.conftest",
+        "description": "tests.test_todos.conftest",
+        "peekOfCode": "def todo_data():\n    todo = {\n        \"user_username\": \"awsx\",\n        \"title\": \"string\",\n        \"description\": \"string\",\n    }\n    return todo",
+        "detail": "tests.test_todos.conftest",
         "documentation": {}
     },
     {
@@ -1309,7 +1663,7 @@
         "kind": 5,
         "importPath": "main",
         "description": "main",
-        "peekOfCode": "app = FastAPI(title=\"Welcome to City!\")\napp.include_router(auth_router, tags=[\"Authorization and register\"])\napp.include_router(v1_router)\norigins = [\n    \"https://awesomexjs.github.io\",\n    \"https://awesomexjs.github.io/pet-fullstack-fastapi-react-city-app\"\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",",
+        "peekOfCode": "app = FastAPI(title=\"Welcome to City!\")\napp.include_router(auth_router, tags=[\"Authorization and register\"])\napp.include_router(router)\norigins = [\n    \"https://awesomexjs.github.io\",\n    \"https://awesomexjs.github.io/pet-fullstack-fastapi-react-city-app\"\n    \"http://localhost.tiangolo.com\",\n    \"https://localhost.tiangolo.com\",\n    \"http://localhost\",\n    \"http://localhost:8000\",",
         "detail": "main",
         "documentation": {}
     },

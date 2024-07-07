@@ -1,14 +1,13 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
-from src.api import router as v1_router
-from src.app_config import app_settings
+from src.api import router
 from src.auth.api.view import router as auth_router
 
 
 app = FastAPI(title="Welcome to City!")
 app.include_router(auth_router, tags=["Authorization and register"])
-app.include_router(v1_router)
+app.include_router(router)
 
 
 origins = [

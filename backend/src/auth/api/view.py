@@ -2,7 +2,6 @@ from typing import Annotated
 
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import (
-    Form,
     status,
     Depends,
     Response,
@@ -12,7 +11,7 @@ from fastapi import (
 from . import crud
 from src.dependencies.session_dep import session_dependency
 from .schemas import (
-    LogoutSchema,
+    UserSchema,
     UserCreateSchema,
     UserRegisterSchema,
 )
@@ -21,8 +20,8 @@ from src.dependencies.auth_dep import (
     get_payload_from_jwt_cookie,
     login_user_by_username_and_password,
 )
-from .exceptions import something_wrong_400_exc
-from .utils import create_jwt_and_set_cookie, delete_cookie, validate_user_by_username
+from src.db.models import User
+from .utils import create_jwt_and_set_cookie
 
 router = APIRouter(prefix="/auth")
 
@@ -41,7 +40,7 @@ async def register_user(
     data: UserRegisterSchema,
 ) -> UserCreateSchema:
     return await crud.create_user(
-        response=responce,
+        # response=responce,
         session=session,
         data=data,
     )
@@ -50,32 +49,31 @@ async def register_user(
 # Логин пользователя
 @router.post(
     "/login",
-    response_model=UserCreateSchema,
+    response_model=UserSchema,
     status_code=status.HTTP_200_OK,
 )
 async def login_user(
-    response: Response,
+    # response: Response,
     user: Annotated[
         UserCreateSchema,
         Depends(login_user_by_username_and_password),
     ],
-) -> UserCreateSchema:
-    await create_jwt_and_set_cookie(
-        response=response,
-        username=user.username,
-    )
-    return user
+):
+    # await create_jwt_and_set_cookie(
+    #     response=response,
+    #     username=user.username,
+    # )
+    return UserSchema(id=user.id, username=user.username)
 
 
 # Логаут (удаление кук)
 @router.post(
     "/logout",
-    #response_model=LogoutSchema,
+    # response_model=LogoutSchema,
     status_code=status.HTTP_200_OK,
 )
 async def logout_user(
     ## ЗАКОМЕНТИЛ СПЕЦИАЛЬНО ЧТОБЫ НА RENDER НОРМАЛЬНО РАБОТАЛ ЛОГАУТ ТАК КАК НЕ ГОНЯЮТСЯ КУКИ И ТОКЕНА ТАМ НЕТ
-    
     # response: Response,
     # payload: Annotated[
     #     dict,
@@ -92,48 +90,46 @@ async def logout_user(
 # Удаление пользователя
 @router.post("/delete")
 async def delete_user(
-    response: Response,
+    # response: Response,
     username: str,
-    payload: Annotated[dict, Depends(get_payload_from_jwt_cookie)],
+    # payload: Annotated[dict, Depends(get_payload_from_jwt_cookie)],
     session: Annotated[AsyncSession, Depends(session_dependency)],
 ):
     return await crud.delete_user(
         username=username,
-        response=response,
-        payload=payload,
+        # response=response,
+        # payload=payload,
         session=session,
     )
 
 
 # проверка на валидность при переходе в другой роут ( проверка кук на юзернейм)
-@router.get("/private_route")
-async def auth_for_private_route(
-    username_from_payload: Annotated[
-        str,
-        Depends(auth_by_jwt_payload),
-    ],
-) -> str:
-    return username_from_payload
+# @router.get("/private_route")
+# async def auth_for_private_route(
+#     username_from_payload: Annotated[
+#         str,
+#         Depends(auth_by_jwt_payload),
+#     ],
+# ) -> str:
+#     return username_from_payload
 
 
-@router.get("/payload")
-async def get_payload(payload: Annotated[dict, Depends(get_payload_from_jwt_cookie)]):
-    return payload
+# @router.get("/payload")
+# async def get_payload(payload: Annotated[dict, Depends(get_payload_from_jwt_cookie)]):
+#     return payload
 
 
 @router.patch("/update")
-async def update_user(
+async def update_user_password(
     response: Response,
-    new_username: str,
+    new_password: str,
     session: Annotated[AsyncSession, Depends(session_dependency)],
-    payload: Annotated[dict, Depends(get_payload_from_jwt_cookie)],
-    user: UserCreateSchema = Depends(login_user_by_username_and_password),
+    user: User = Depends(login_user_by_username_and_password),
 ) -> UserCreateSchema:
 
-    return await crud.update_username(
+    return await crud.update_password(
         response=response,
-        new_username=new_username,
         session=session,
-        payload=payload,
         user=user,
+        new_password=new_password,
     )
