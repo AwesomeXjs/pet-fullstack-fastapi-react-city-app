@@ -7,10 +7,10 @@ export default defineConfig({
 	server: {
 		port: 10000,
 		proxy: {
-			'https://pet-fullstack-fastapi-react-city-app-1.onrender.com': {
+			'/auth': {
 				target: 'https://pet-fullstack-fastapi-react-city-app-1.onrender.com',
 				changeOrigin: true,
-				rewrite: path => path.replace(/^\/api/, '/api'),
+				rewrite: path => path.replace(/^\/auth/, '/auth'),
 			},
 		},
 	},

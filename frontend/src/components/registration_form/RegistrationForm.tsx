@@ -117,14 +117,10 @@ const RegistrtionForm: FC<RegisterProps> = ({ setOpen, setAuth }) => {
 
 	const registerAndLoginHandler = () => {
 		if (label == 'Регистрация') {
-			universalUrlRegisterAndLogin(
-				'https://pet-fullstack-fastapi-react-city-app-1.onrender.com/auth/register'
-			)
+			universalUrlRegisterAndLogin('/auth/register')
 			return
 		} else {
-			universalUrlRegisterAndLogin(
-				'https://pet-fullstack-fastapi-react-city-app-1.onrender.com/auth/login'
-			)
+			universalUrlRegisterAndLogin('/auth/login')
 		}
 	}
 
