@@ -16,9 +16,10 @@ interface InputFormProps {
 	username: string | boolean
 	setUsername: Dispatch<SetStateAction<string | boolean>>
 	label: string
+	type: string
 }
 
-const InputForm: FC<InputFormProps> = ({ username, setUsername, label }) => {
+const InputForm: FC<InputFormProps> = ({ username, setUsername, label, type }) => {
 	const classes = useStyles()
 
 	return (
@@ -29,7 +30,7 @@ const InputForm: FC<InputFormProps> = ({ username, setUsername, label }) => {
 						<AccountCircle />
 					</Grid>
 					<Grid item>
-						<TextField
+						<TextField type={type}
 							value={username}
 							onChange={e => setUsername(e.target.value)}
 							id='input-with-icon-grid'

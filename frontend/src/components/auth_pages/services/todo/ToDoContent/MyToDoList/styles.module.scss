@@ -1,0 +1,64 @@
+@import '../../../../../../scss/variables';
+
+.toDoLostWrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	& > div {
+		margin-right: 15px;
+		margin-bottom: 15px;
+	}
+}
+.buttonWrapper {
+	display: flex;
+	justify-content: center;
+}
+.inputWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+}
+.btn {
+	margin-bottom: 10px;
+}
+.modal {
+	border-radius: 20px;
+}
+.toDoCard {
+	color: $accent;
+	background-color: white;
+	min-width: 150px;
+	min-height: 150px;
+	border-radius: 10px;
+	border: 2px solid $accent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	&:hover {
+		cursor: pointer;
+		transition: $transition;
+		box-shadow: 0 0 20px 5px black;
+	}
+}
+.toDoNotFound {
+	color: $accent;
+	background-color: white;
+	min-width: 150px;
+	min-height: 150px;
+	border-radius: 10px;
+	border: 2px solid $accent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	margin-right: 0px !important; 
+	&:hover {
+		cursor: pointer;
+		transition: $transition;
+		box-shadow: 0 0 20px 5px black;
+	}
+}
+
+@import './stylesMedia.module.scss';

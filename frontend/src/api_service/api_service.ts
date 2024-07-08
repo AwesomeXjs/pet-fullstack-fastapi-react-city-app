@@ -7,14 +7,20 @@ export const universalUrlRegisterAndLogin = (
 	username: string | boolean,
 	password: string | boolean,
 	setOpen: Dispatch<SetStateAction<boolean>>,
-	setAuth: Dispatch<SetStateAction<boolean>>
+	setAuth: Dispatch<SetStateAction<boolean>>,
+	setUser: Dispatch<SetStateAction<string | boolean>>,
+	goToAuthPage: () => void
 ) => {
-	const data_json = JSON.stringify({ username: username, password: password })
-	if (!password || !username) {
-		toast.error('Нужно ввести юзернейм и пароль!')
-		return
+	if (typeof password == "string") {
+		if (password.length < 5 || !username) {
+			toast.error('Нужно ввести юзернейм и пароль минимум из 5 символов!')
+			return
+		}
 	}
-	const my_prom = axios({
+
+	const data_json = JSON.stringify({ username: username, password: password })
+	
+	axios({
 		method: 'POST',
 		url: url,
 		data: data_json,
@@ -24,54 +30,71 @@ export const universalUrlRegisterAndLogin = (
 	})
 		.then(function (response) {
 			if (response.status == 202) {
+				toast.dismiss()
 				toast.error('Пользователь с таким юзернеймом уже зарегестрирован!')
 				return
 			}
 			if (response.status == 201) {
+				toast.dismiss()
 				toast.success(
 					`Вы успешно прошли регистрацию! ${response.data.username}, добро пожаловать!`
 				)
 				setOpen(false)
 				setAuth(true)
+				setUser(response.data.username)
+				console.log(response.data.username)
+				goToAuthPage()
 				return
 			}
 			if (response.status == 200) {
+				toast.dismiss()
 				toast.success('Вы успешно вошли в систему!', {})
 				setOpen(false)
 				setAuth(true)
+				setUser(response.data.username)
+				console.log(response.data.username)
+				goToAuthPage()
 				return
 			}
-			console.log(response)
+			toast.dismiss()
+			return
 		})
-		.catch(function () {
+		.catch(function (error) {
+			if (error.response) {
+				toast.dismiss()
+				toast.error(`${error.response.data.detail}`)
+				return
+			}
+			toast.dismiss()
 			toast.error('Что то пошло не так попробуйте позже!')
 			setOpen(false)
+			return
 		})
-
-	toast.promise(my_prom, {
-		loading: 'Ожидание...',
-		success: 'Ответ получен!',
-		error: 'Could not save.',
-	})
+	toast.loading('Ожидание...')
+	return
 }
 
 export const logoutUs = (
 	url: string,
 	setAuth: Dispatch<SetStateAction<boolean>>
 ) => {
-	const my_prom = axios
+	axios
 		.post(url, { withCredentials: true })
 		.then(function () {
+			toast.dismiss()
 			toast.success('Досвидания!')
 			setAuth(false)
+			return
+			
 		})
 		.catch(function () {
 			setAuth(false)
+			toast.dismiss()
 			toast.success('Досвидания!')
+			return
+			
 		})
-	toast.promise(my_prom, {
-		loading: 'Ожидание...',
-		success: 'Ответ получен!',
-		error: 'Could not save.',
-	})
+	toast.loading('Ожидание...',)
+	toast.dismiss()
+	return
 }

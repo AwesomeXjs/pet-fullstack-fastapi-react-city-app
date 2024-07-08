@@ -1,9 +1,14 @@
-import styles from './styles.module.scss'
+import { FC } from 'react'
 
-const AuthPage = () => {
+import styles from './styles.module.scss'
+import Todo from './services/todo/Todo'
+
+interface AuthPageProps {}
+
+const AuthPage: FC<AuthPageProps> = () => {
 	return (
-		<div className={`${styles.mainPageText} container`}>
-			ТУТ БУДЕТ СТРАНИЦА ЕСЛИ ТЫ ПРОЙДЕШЬ РЕГИСТРАЦИЮ
+		<div className={`${styles.mainPageContent} container`}>
+			<Todo />
 		</div>
 	)
 }

@@ -2,6 +2,19 @@
 
 .mainPageText {
 	display: flex;
-	justify-self: center;
+	justify-content: center;
 	align-items: center;
 }
+
+.clockWrapper {
+	position: absolute;
+	z-index: 1;
+	top: 150%;
+	left: 10%;
+	font-size: 10rem;
+	color: white;
+	-webkit-text-stroke: 1px rgba(0, 0, 0, 1);
+	animation: clock 1s 1;
+}
+
+@import './stylesMedia.module.scss';

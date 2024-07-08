@@ -1,0 +1,42 @@
+@include hd_plus() {
+	// 1920px --
+}
+
+@include hd() {
+	//1440px --
+}
+@media screen and (min-width: 1200px) {
+}
+
+@include wide() {
+	//1200px --
+}
+
+@include desktop() {
+	// 992px--
+	.clockWrapper {
+		top: 500%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-size: 5rem;
+		//min-width: 80%;
+		margin: 0 auto;
+	}
+}
+@include tablet() {
+	// 768px--
+	.formWrapper {
+		width: 90%;
+		margin: 0 auto;
+	}
+	.form {
+		min-width: 0;
+		width: 100%;
+	}
+}
+@include mobile() {
+	// 568px--
+}
+@include mobile-s() {
+	// 414px--
+}

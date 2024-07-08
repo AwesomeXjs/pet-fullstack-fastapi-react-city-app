@@ -1,0 +1,40 @@
+@import '../../../../../../scss/variables';
+
+.todoContentWrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	min-height: 80vh;
+}
+
+.toDoCard {
+	color: $accent;
+	background-color: white;
+	min-width: 150px;
+	min-height: 150px;
+	border-radius: 10px;
+	border: 2px solid $accent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: welcomeToDo 0.5s 1 ease-out;
+	padding: 10px;
+	margin-right: 20px;
+}
+
+.inputWrapper {
+	display: flex;
+	flex-direction: column;
+}
+
+.btn {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+	> * {
+		width: 100%;
+	}
+}
+
+@import './stylesMedia.module.scss';

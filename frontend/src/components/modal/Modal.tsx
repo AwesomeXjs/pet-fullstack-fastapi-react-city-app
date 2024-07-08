@@ -27,6 +27,7 @@ export interface ModalProps {
 	open: boolean
 	setOpen: Dispatch<SetStateAction<boolean>>
 	setAuth: Dispatch<SetStateAction<boolean>>
+	setUser: Dispatch<SetStateAction<string | boolean>>
 }
 
 const TransitionsModal: FC<ModalProps> = ({
@@ -34,6 +35,7 @@ const TransitionsModal: FC<ModalProps> = ({
 	open,
 	setOpen,
 	setAuth,
+	setUser,
 }) => {
 	const classes = useStyles()
 
@@ -54,7 +56,11 @@ const TransitionsModal: FC<ModalProps> = ({
 				<Fade in={open}>
 					<div className={`${classes.paper}`}>
 						{/* Любой компонент для модалки */}
-						<RegistrtionForm setOpen={setOpen} setAuth={setAuth} />
+						<RegistrtionForm
+							setUser={setUser}
+							setOpen={setOpen}
+							setAuth={setAuth}
+						/>
 					</div>
 				</Fade>
 			</Modal>

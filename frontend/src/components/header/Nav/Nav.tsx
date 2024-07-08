@@ -1,12 +1,11 @@
 import React, { Dispatch, FC, SetStateAction } from 'react'
 import BottomNavigation from '@material-ui/core/BottomNavigation'
 import BottomNavigationAction from '@material-ui/core/BottomNavigationAction'
-import RestoreIcon from '@material-ui/icons/Restore'
-import FavoriteIcon from '@material-ui/icons/Favorite'
-import LocationOnIcon from '@material-ui/icons/LocationOn'
 import LoginIcon from '@mui/icons-material/Login'
 import LogoutIcon from '@mui/icons-material/Logout'
 import 'react-toastify/dist/ReactToastify.css'
+import { useNavigate } from 'react-router-dom'
+import ComputerIcon from '@mui/icons-material/Computer'
 
 import styles from './styles.module.scss'
 import { logoutUs } from '../../../api_service/api_service'
@@ -18,8 +17,13 @@ interface NavProps {
 }
 
 const LabelBottomNavigation: FC<NavProps> = ({ handleOpen, auth, setAuth }) => {
+	const navigate = useNavigate()
+
 	const logoutFx = () => {
-		logoutUs('/auth/logout', setAuth)
+		logoutUs(
+			'https://pet-fullstack-fastapi-react-city-app-1.onrender.com/auth/logout',
+			setAuth
+		)
 	}
 
 	const [value, setValue] = React.useState('')
@@ -39,20 +43,12 @@ const LabelBottomNavigation: FC<NavProps> = ({ handleOpen, auth, setAuth }) => {
 				className={`${styles.nav_main_style}`}
 			>
 				<BottomNavigationAction
-					label='Recents'
+					onClick={() => navigate('/userPage')}
+					label='Services'
 					value='recents'
-					icon={<RestoreIcon />}
+					icon={<ComputerIcon />}
 				/>
-				<BottomNavigationAction
-					label='Favorites'
-					value='favorites'
-					icon={<FavoriteIcon />}
-				/>
-				<BottomNavigationAction
-					label='Nearby'
-					value='nearby'
-					icon={<LocationOnIcon />}
-				/>
+
 				{!auth ? (
 					<BottomNavigationAction
 						onClick={handleOpen}

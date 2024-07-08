@@ -1,0 +1,32 @@
+@include hd_plus() {
+	// 1920px --
+}
+
+@include hd() {
+	//1440px --
+}
+@media screen and (min-width: 1200px) {
+}
+
+@include wide() {
+	//1200px --
+}
+
+@include desktop() {
+	// 992px--
+	.nav_main_style {
+		min-width: 60%;
+	}
+}
+@include tablet() {
+	// 768px--
+}
+@include mobile() {
+	// 568px--
+	.nav_main_style {
+		min-width: 90%;
+	}
+}
+@include mobile-s() {
+	// 414px--
+}

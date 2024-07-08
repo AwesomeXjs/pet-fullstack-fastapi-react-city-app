@@ -7,6 +7,9 @@ import Box from '@material-ui/core/Box'
 import Button from '@material-ui/core/Button'
 import InputForm from './input/InputForm'
 import { universalUrlRegisterAndLogin } from '../../api_service/api_service'
+import { useNavigate } from 'react-router-dom'
+import styles from './styles.module.scss'
+
 
 interface TabPanelProps {
 	children?: React.ReactNode
@@ -44,14 +47,19 @@ function a11yProps(index: unknown) {
 interface RegisterProps {
 	setOpen: Dispatch<SetStateAction<boolean>>
 	setAuth: Dispatch<SetStateAction<boolean>>
+	setUser: Dispatch<SetStateAction<string | boolean>>
 }
 
-const RegistrtionForm: FC<RegisterProps> = ({ setOpen, setAuth }) => {
+const RegistrtionForm: FC<RegisterProps> = ({ setOpen, setAuth, setUser }) => {
 	const [value, setValue] = useState(0)
 	const [label, setLabel] = useState('Регистрация')
 
 	const [username, setUsername] = useState<string | boolean>('')
 	const [password, setPassword] = useState<string | boolean>('')
+
+	const navigate = useNavigate()
+
+	const goToAuth = () => navigate('/userPage')
 
 	const setLabelLogin = () => {
 		setLabel('Войти')
@@ -67,23 +75,28 @@ const RegistrtionForm: FC<RegisterProps> = ({ setOpen, setAuth }) => {
 		setValue(newValue)
 	}
 
-	const registerAndLoginHandler = () => {
+	const registerAndLoginHandler = (_event: React.ChangeEvent<object>) => {
+		_event.preventDefault()
 		if (label == 'Регистрация') {
 			universalUrlRegisterAndLogin(
-				'/auth/register',
+				'https://pet-fullstack-fastapi-react-city-app-1.onrender.com/auth/register',
 				username,
 				password,
 				setOpen,
-				setAuth
+				setAuth,
+				setUser,
+				goToAuth
 			)
 			return
 		} else {
 			universalUrlRegisterAndLogin(
-				'/auth/login',
+				'https://pet-fullstack-fastapi-react-city-app-1.onrender.com/auth/login',
 				username,
 				password,
 				setOpen,
-				setAuth
+				setAuth,
+				setUser,
+				goToAuth
 			)
 		}
 	}
@@ -101,38 +114,50 @@ const RegistrtionForm: FC<RegisterProps> = ({ setOpen, setAuth }) => {
 						<Tab onClick={setLabelLogin} label='Вход' {...a11yProps(1)} />
 					</Tabs>
 				</AppBar>
-				<TabPanel value={value} index={0}>
-					<InputForm
-						label='Введите ваш username'
-						username={username}
-						setUsername={setUsername}
-					/>
-					<InputForm
-						label='Введите ваш пароль'
-						username={password}
-						setUsername={setPassword}
-					/>
-				</TabPanel>
-				<TabPanel value={value} index={1}>
-					<InputForm
-						label='Введите ваш username'
-						username={username}
-						setUsername={setUsername}
-					/>
-					<InputForm
-						label='Введите ваш пароль'
-						username={password}
-						setUsername={setPassword}
-					/>
-				</TabPanel>
+				<form onSubmit={registerAndLoginHandler} action=''>
+					<TabPanel value={value} index={0}>
+						<InputForm
+							type='text'
+							label='Введите ваш username'
+							username={username}
+							setUsername={setUsername}
+						/>
+						<InputForm
+						type='password'
+							label='Введите ваш пароль'
+							username={password}
+							setUsername={setPassword}
+						/>
+					</TabPanel>
+					<TabPanel value={value} index={1}>
+						<div>
+							<InputForm
+								type='text'
+								label='Введите ваш username'
+								username={username}
+								setUsername={setUsername}
+							/>
+
+							<InputForm
+								type='password'
+								label='Введите ваш пароль'
+								username={password}
+								setUsername={setPassword}
+							/>
+						</div>
+					</TabPanel>
+					<div className={styles.btn}>
+						<Button
+							type='submit'
+							onClick={registerAndLoginHandler}
+							variant='contained'
+							color='primary'
+						>
+							{label}
+						</Button>
+					</div>
+				</form>
 			</div>
-			<Button
-				onClick={registerAndLoginHandler}
-				variant='contained'
-				color='primary'
-			>
-				{label}
-			</Button>
 		</>
 	)
 }

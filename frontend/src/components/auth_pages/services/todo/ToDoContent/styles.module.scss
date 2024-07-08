@@ -1,0 +1,44 @@
+@import '../../../../../scss/variables';
+
+.todoContentWrapper {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	min-height: 80vh;
+}
+
+.toDoCard {
+	color: $accent;
+	background-color: white;
+	min-width: 150px;
+	min-height: 150px;
+	border-radius: 10px;
+	border: 2px solid $accent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	animation: welcomeToDo 0.5s 1 ease-out;
+	padding: 10px;
+	margin-right: 20px;
+	&:hover {
+		cursor: pointer;
+		transition: $transition;
+		box-shadow: 0 0 20px 5px black;
+	}
+	&:active {
+		transition: $transition;
+		transform: scale(0.8);
+	}
+}
+
+@keyframes welcomeToDo {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@import './stylesMedia.module.scss';

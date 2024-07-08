@@ -1,0 +1,14 @@
+@import '../scss/variables';
+
+.WelcomeVideo {
+	height: 100%;
+	width: 100%;
+	position: fixed;
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	object-fit: cover;
+	width: 100vw;
+	height: 100vh;
+	z-index: -1;
+}
